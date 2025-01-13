@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "ef-security-checklist",
+  "short_name": "EF Security Checklist",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#5616c6",
+  "description": "Step by step guide to safeguarding your digital presence and ensuring your privacy"
+}
