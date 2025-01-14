@@ -4,68 +4,76 @@
   icon: password
   color: yellow
   intro: >-
-    Most reported data breaches are caused by the use of weak, default or stolen passwords
-    (according to [this Verizon report](http://www.verizonenterprise.com/resources/reports/rp_dbir-2016-executive-summary_xg_en.pdf)).
-    Use long, strong and unique passwords, manage them in a secure password manager, enable
-    2-factor authentication, keep on top of breaches and take care while logging into your accounts.
+    Most reported data breaches are caused by the use of weak, repeated, or default passwords.
+    Following the advice in this section will teach you how to stay on top of breaches and secure access 
+    to your accounts.
   checklist:
-  - point: Use a Strong Password
+  - point: Use a strong password
     priority: Essential
     details: >-
-      If your password is too short, or contains dictionary words, places or names- then it can be easily
-      cracked through brute force, or guessed by someone. The easiest way to make a strong password, is by
-      making it long (12+ characters)- consider using a 'passphrase', made up of many words. Alternatively,
-      use a password generator to create a long, strong random password. Have a play with
-      [HowSecureIsMyPassword.net](https://howsecureismypassword.net), to get an idea of how quickly common
-      passwords can be cracked. Read more about creating strong passwords:
-      [securityinabox.org](https://securityinabox.org/en/passwords/passwords-and-2fa/)
+      If your password is too short or contains dictionary words, places, or names, it can be easily
+      cracked through brute force or guessed by someone. The easiest way to make a strong password
+      is to make it long (15+ characters). Consider using a 'passphrase' of multiple words, or
+      use a password generator to create a long, strong, random password. Try
+      [this tool](https://www.security.org/how-secure-is-my-password/) to see how quickly your
+      passwords can be cracked.
 
-  - point: Don't reuse Passwords
+  - point: Don't reuse passwords
     priority: Essential
     details: >-
-      If someone was to reuse a password, and one site they had an account with suffered a leak, then a
-      criminal could easily gain unauthorized access to their other accounts. This is usually done through
-      large-scale automated login requests, and it is called Credential Stuffing. Unfortunately this is all
-      too common, but it's simple to protect against- use a different password for each of your online accounts
+      If someone reuses a password and a site they have an account with suffers a leak,
+      a criminal can easily gain unauthorized access to their other accounts.
+      This is often done through large-scale automated login attempts, known as Credential Stuffing.
+      Files with email addresses and their passwords having millions of records are available online.
+      It’s easy to prevent—just use a unique password for each account.
 
-  - point: Use a Secure Password Manager
+  - point: Use a password manager
     priority: Essential
     details: >-
-      For most people it is going to be near-impossible to remember hundreds of strong and unique passwords.
-      A password manager is an application that generates, stores and auto-fills your login credentials for you.
-      All your passwords will be encrypted against 1 master passwords (which you must remember, and it should be
-      very strong). Most password managers have browser extensions and mobile apps, so whatever device you are on,
-      your passwords can be auto-filled. A good all-rounder is
-      [Bitwarden](https://awesome-privacy.xyz/essentials/password-managers/bitwarden), or see
-      [Recommended Password Managers](https://awesome-privacy.xyz/essentials/password-managers)
+      It is impossible for human to remember hundreds of strong and unique passwords. 
+      A password manager is an application that generates, stores, and auto-fills your login credentials. 
+      All your passwords are encrypted with one master passphrase, which you must remember and keep strong. 
+      Most password managers have browser extensions and mobile apps, so your passwords can be auto-filled 
+      on any device. 1Password is recommended by EF, and as a member you would get 
+      [1Password Families](https://support.1password.com/explore/families/) subscription.
 
   - point: Avoid sharing passwords
     priority: Essential
     details: >-
-      While there may be times that you need to share access to an account with another person, you should
-      generally avoid doing this because it makes it easier for the account to become compromised. If you
-      absolutely do need to share a password for example when working on a team with a shared account this
-      should be done via features built into a password manager.
+      While there may be times when you need to share access to an account with another person, you should 
+      generally avoid doing so, as it makes the account more vulnerable. If you must share a password—such 
+      as when working on a team—it should be done using features built into a password manager. By creating 
+      a vault in 1Password, you can share credentials only with those you choose, rather than exposing them 
+      to the entire internet.
 
   - point: Enable 2-Factor Authentication
     priority: Essential
     details: >-
-      2FA is where you must provide both something you know (a password) and something you have (such as a
-      code on your phone) to log in. This means that if anyone has got your password (e.g. through phishing,
-      malware or a data breach), they will not be able to log into your account. It's easy to get started,
-      download [an authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)
-      onto your phone, and then go to your account security settings and follow the steps to enable 2FA. Next
-      time you log in on a new device, you will be prompted for the code that displays in the app on your phone
-      (it works without internet, and the code usually changes every 30-seconds)
+      2FA is where you must provide both something you know (a password) and something you have (such as a 
+      code from your device) to log in.
+      This means that if anyone has your password, they still will not be able to access your account.
+      It's easy to get started. Download [an authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication) 
+      onto your phone, then follow the steps for each account to add it to the app and enable 2FA.
+      Next time you log in on a new device, you will be prompted for the code displayed in the app on your 
+      phone (it works without internet, and the code usually changes every 30 seconds).
 
-  - point: Keep Backup Codes Safe
+  - point: Avoid using SMS for 2FA
+    priority: Essential
+    details: >-
+      When enabling multi-factor authentication, opt for app-based codes or a hardware token (Yubikey). SMS is
+      susceptible to a number of common threats, such as [SIM-swapping](https://www.maketecheasier.com/sim-card-hijacking)
+      and [interception](https://secure-voice.com/ss7_attacks). Your phone number is a public identifier and should
+      not be used for authentication purposes. From a practical point of view, SMS only works when
+      you have a signal and can be unreliable. If a bank website or payment service requires using an SMS number,
+      consider purchasing a second prepaid secret phone number only used for account recovery in these instances.
+
+  - point: Keep backup codes safe
     priority: Essential
     details: >-
       When you enable multi-factor authentication, you will usually be given several codes that you can use if
-      your 2FA method is lost, broken or unavailable. Keep these codes somewhere safe to prevent loss or
-      unauthorized access. You should store these on paper or in a safe place on disk (e.g. in offline storage
-      or in an encrypted file/drive). Don't store these in your Password Manager as 2FA sources and passwords
-      and should be kept separately.
+      your 2FA method is lost, broken, or unavailable. Keep these codes somewhere safe to prevent loss or
+      unauthorized access. You should store them on paper or in an encrypted file or drive. Don't store them in your
+      password manager, as 2FA and passwords must be kept separate, or it defeats the entire purpose of 2FA.
 
   - point: Sign up for Breach Alerts
     priority: Optional
@@ -131,16 +139,6 @@
       Don’t use a short PIN to access your smartphone or computer. Instead, use a text password or much longer pin.
       Numeric passphrases are easy crack, (A 4-digit pin has 10,000 combinations, compared to 7.4 million for a
       4-character alpha-numeric code)
-
-  - point: Avoid using SMS for 2FA
-    priority: Optional
-    details: >-
-      When enabling multi-factor authentication, opt for app-based codes or a hardware token, if supported. SMS is
-      susceptible to a number of common threats, such as [SIM-swapping](https://www.maketecheasier.com/sim-card-hijacking)
-      and [interception](https://secure-voice.com/ss7_attacks). There's also no guarantee of how securely your phone
-      number will be stored, or what else it will be used for. From a practical point of view, SMS will only work when
-      you have signal, and can be slow. If a website or service requires the usage of a SMS number for recovery consider
-      purchasing a second pre-paid phone number only used for account recovery for these instances.
 
   - point: Avoid using your PM to Generate OTPs
     priority: Advanced

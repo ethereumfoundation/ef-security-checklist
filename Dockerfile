@@ -13,8 +13,6 @@ RUN npm install
 # Copy the rest of the project files into the container
 COPY . .
 
-# Expose the port that the application will run on
-EXPOSE 3000
+EXPOSE 4173
 
-# Define the command to start the application in SSR mode
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "preview"]
