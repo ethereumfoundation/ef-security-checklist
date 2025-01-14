@@ -26,7 +26,7 @@ export default component$(() => {
   <div class="hero-content text-center bg-front shadow-sm lg:rounded-xl w-full">
     <div class="max-w-2xl flex flex-col place-items-center">
       <h1 class="text-5xl font-bold">EF Security Checklist</h1>
-      <p class="subtitle pb-6">Step by step guide to safeguarding your digital presence and ensuring your privacy</p>
+      <p class="subtitle pb-6">Step by step guide to safeguarding your digital presence and ensuring your privacy.</p>
       
 
       <div class="flex items-center justify-center gap-4">

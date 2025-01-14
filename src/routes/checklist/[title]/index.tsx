@@ -33,7 +33,7 @@ export default component$(() => {
     </div>
     <article class="bg-back p-8 mx-auto w-full max-w-[1200px] rounded-lg shadow-md">
       <h1 class={['gap-2 text-5xl font-bold capitalize flex']}>
-        <Icon height={36} width={36} icon={section?.icon || 'star'}  />
+        <Icon class="mt-2 mr-4" height={36} width={36} icon={section?.icon || 'star'}  />
         {section?.title}
       </h1>
       <p class="py-2" dangerouslySetInnerHTML={parseMarkdown(section?.intro)}></p>
