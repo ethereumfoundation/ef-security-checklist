@@ -67,141 +67,124 @@
       you have a signal and can be unreliable. If a bank website or payment service requires using an SMS number,
       consider purchasing a second prepaid secret phone number only used for account recovery in these instances.
 
+  - point: Set up Hardware Token authentication
+    priority: Essential
+    details: >-
+      The most secure way to authenticate is a U2F/FIDO2 security key such as Yubikey. This is a device that you connect 
+      while logging in to an online service to verify your identity. It brings several security benefits,
+      since the browser communicates directly with the device and cannot be fooled as to which host is requesting
+      authentication. Please follow the [EF Hardware Security Keys Guidelines](https://docs.google.com/document/d/1kiQEDwV92hnrZhdgZk1paBp_HJtUlBOkUYYGZkJInFA/edit?tab=t.0)
+      to proceed with getting and setting up your security keys. [Read more](https://security.stackexchange.com/questions/71316/how-secure-are-the-fido-u2f-tokens/71704#71704) 
+      opinion why this is so important.
+
   - point: Keep backup codes safe
     priority: Essential
     details: >-
       When you enable multi-factor authentication, you will usually be given several codes that you can use if
       your 2FA method is lost, broken, or unavailable. Keep these codes somewhere safe to prevent loss or
-      unauthorized access. You should store them on paper or in an encrypted file or drive. Don't store them in your
-      password manager, as 2FA and passwords must be kept separate, or it defeats the entire purpose of 2FA.
+      unauthorized access. You should store them on always offline device, paper, or in an encrypted file.
+      Don't store them in your primary password manager, as 2FA and passwords must be kept separate. By merging 
+      them you defeat the entire purpose of second factor in the authentication process.
 
   - point: Sign up for Breach Alerts
     priority: Optional
     details: >-
-      After a website suffers a significant data breach, the leaked data often ends up on the internet. There
-      are several websites that collect these leaked records, and allow you to search your email address to check
-      if you are in any of their lists. [Firefox Monitor](https://monitor.firefox.com), [Have I been pwned](https://haveibeenpwned.com)
-      and [DeHashed](https://dehashed.com) allow you to sign up for monitoring, where they will notify you if your
-      email address appears in any new data sets. It is useful to know as soon as possible when this happens, so
-      that you can change your passwords for the affected accounts. [Have i been pwned](https://awesome-privacy.xyz/security-tools/online-tools/have-i-been-pwned) also has domain-wide
-      notification, where you can receive alerts if any email addresses under your entire domain appear (useful if
-      you use aliases for [anonymous forwarding](https://github.com/Lissy93/awesome-privacy#anonymous-mail-forwarding))
+      After any website suffers a significant data breach, the leaked data often ends up on the internet. There
+      are several websites that collect these leaked records and allow you to search your email address to check
+      if you are in any of their lists. [Firefox Monitor](https://monitor.firefox.com) and [Have I Been Pwned](https://haveibeenpwned.com)
+      let you sign up for monitoring, where they will notify you if your email address appears in any new data sets.
+      It is useful to know as soon as possible when this happens, so you can change your passwords for the affected accounts.
 
-  - point: Shield your Password/ PIN
+  - point: Shield your password / PIN
     priority: Optional
     details: >-
       When typing your password in public places, ensure you are not in direct line of site of a CCTV camera and
-      that no one is able to see over your shoulder. Cover your password or pin code while you type, and do not
-      reveal any plain text passwords on screen
-
-  - point: Update Critical Passwords Periodically
-    priority: Optional
-    details: >-
-      Database leaks and breaches are common, and it is likely that several of your passwords are already somewhere
-      online. Occasionally updating passwords of security-critical accounts can help mitigate this. But providing
-      that all your passwords are long, strong and unique, there is no need to do this too often- annually should be
-      sufficient. Enforcing mandatory password changes within organisations is [no longer recommended](https://duo.com/decipher/microsoft-will-no-longer-recommend-forcing-periodic-password-changes),
-      as it encourages colleagues to select weaker passwords
+      that no one is able to see over your shoulder. Cover your password or PIN code while you type, and do not
+      reveal any plain text passwords on screen.
 
   - point: Don’t save your password in browsers
     priority: Optional
     details: >-
-      Most modern browsers offer to save your credentials when you log into a site. Don’t allow this, as they are
-      not always encrypted, hence could allow someone to gain access into your accounts. Instead use a dedicated
-      password manager to store (and auto-fill) your passwords
+      Browsers offer to save your credentials when you log into a site. Don’t allow this, as they are not always encrypted, 
+      hence could allow someone to gain access into your accounts. Instead use a dedicated password manager to store 
+      (and auto-fill) your passwords. Password manager extension in browser will provide same experience in a secure way.
 
   - point: Avoid logging in on someone else’s device
     priority: Optional
     details: >-
-      Avoid logging on other people's computer, since you can't be sure their system is clean. Be especially cautious
-      of public machines, as malware and tracking is more common here. Using someone else's device is especially
-      dangerous with critical accounts like online banking. When using someone else's machine, ensure that you're in a
-      private/ incognito session (Use Ctrl+Shift+N/ Cmd+Shift+N). This will request browser to not save your credentials,
-      cookies and browsing history.
+      Avoid logging in on other people's computers, as you can't be sure their system is clean. Be especially cautious 
+      of public machines in hotels and airports, as malware and tracking are more common here. Using someone else's device 
+      is particularly dangerous for critical accounts like email or online finance. When using someone else's machine, 
+      ensure that you're in a private/incognito session (use File menu in browser to open it). This will request the browser 
+      not to save your credentials, cookies, and browsing history.
 
   - point: Avoid password hints
     priority: Optional
     details: >-
-      Some sites allow you to set password hints. Often it is very easy to guess answers. In cases where password hints
-      are mandatory use random answers and record them in password manager (`Name of the first school: 6D-02-8B-!a-E8-8F-81`)
+      Some sites allow you to set password hints. Often, it is very easy to guess the answers. In cases where password hints
+      are mandatory, use random answers and record them in a password manager (e.g., `Name of the first school: SmelledNotLikeHogwarts`).
 
   - point: Never answer online security questions truthfully
     priority: Optional
     details: >-
-      If a site asks security questions (such as place of birth, mother's maiden name or first car etc), don't provide
+      If a site asks security questions (such as place of birth, mother's maiden name, or first car, etc.), don't provide
       real answers. It is a trivial task for hackers to find out this information online or through social engineering.
-      Instead, create a fictitious answer, and store it inside your password manager. Using real-words is better than
-      random characters, [explained here](https://news.ycombinator.com/item?id=29244870)
+      Instead, create a fictitious answer and store it inside your password manager. 
+      Make sure that your fake answers aren't autogenerated nonsense like "N_9bKTC_i94". Many password reset flows 
+      involve communicating a security answer over the phone, and it's easy enough for an attacker to guess 
+      "oh, it's just a bunch of random characters" and for the customer support to just shrug and let the person in. 
 
   - point: Don’t use a 4-digit PIN
     priority: Optional
     details: >-
-      Don’t use a short PIN to access your smartphone or computer. Instead, use a text password or much longer pin.
-      Numeric passphrases are easy crack, (A 4-digit pin has 10,000 combinations, compared to 7.4 million for a
-      4-character alpha-numeric code)
+      Don't use a short PIN to access your smartphone or computer. Instead, use a text password or PIN code of undefined length.
+      Numeric passphrases are easy to crack - a 4-digit PIN has only 10,000 combinations, compared to billions of possibilities
+      when an attacker doesn't know the length and has to check every possible case.
 
-  - point: Avoid using your PM to Generate OTPs
+  - point: Avoid using your Password Manager to generate 2FA codes
     priority: Advanced
     details: >-
-      Many password managers are also able to generate 2FA codes. It is best not to use your primary password manager
+      Most password managers are also able to generate 2FA OTP codes. It is best not to use your primary password manager
       as your 2FA authenticator as well, since it would become a single point of failure if compromised. Instead use a
-      dedicated [authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication) on your phone or laptop
+      dedicated authenticator app on your phone or laptop, with separate encryption and authentication.
 
-  - point: Avoid Face Unlock
+  - point: Understand Face Unlock feature
     priority: Advanced
     details: >-
       Most phones and laptops offer a facial recognition authentication feature, using the camera to compare a snapshot
-      of your face with a stored hash. It may be very convenient, but there are numerous ways to [fool it](https://www.forbes.com/sites/jvchamary/2017/09/18/security-apple-face-id-iphone-x/)
-      and gain access to the device, through digital photos and reconstructions from CCTV footage. Unlike your password-
-      there are likely photos of your face on the internet, and videos recorded by surveillance cameras
+      of your face with a stored model. It may be very convenient, but there are numerous ways to fool it
+      and gain access to the device, if it's implemented incorrectly. An example of good implementation is Apple TrueDepth 
+      camera system which uses infrared dot projector to build a 3D map of your face. It requires a realistic 3D facial model 
+      or an identical twin to attempt to bypass (which is relatively rare). But general Android phone can be fooled by photo 
+      of your face from the Internet, or from videos recorded by surveillance cameras.
 
-  - point: Watch out for Keyloggers
+  - point: Watch out for keyloggers
     priority: Advanced
     details: >-
       A hardware [keylogger](https://en.wikipedia.org/wiki/Hardware_keylogger) is a physical device planted between
-      your keyboard and the USB port, which intercepts all key strokes, and sometimes relays data to a remote server.
-      It gives a hacker access to everything typed, including passwords. The best way to stay protected, is just by
-      checking your USB connection after your PC has been unattended. It is also possible for keyloggers to be planted
-      inside the keyboard housing, so look for any signs that the case has been tampered with, and consider bringing your
-      own keyboard to work. Data typed on a virtual keyboard, pasted from the clipboard or auto-filled by a password
-      manager can not be intercepted by a hardware keylogger.
+      your keyboard and the USB port, which intercepts all key strokes, and sometimes can type in malicious commands.
+      It gives a hacker access to everything typed, including passwords. It is also possible for keyloggers to be planted
+      inside the cable, so look for any signs that the cables or connectors have been tampered with. Data pasted from the 
+      clipboard or auto-filled by a password manager can not be intercepted by a hardware keylogger.
 
-  - point: Consider a Hardware Token
+  - point: Deploy offline password manager
     priority: Advanced
     details: >-
-      A U2F/ FIDO2 security key is a USB (or NFC) device that you insert while logging in to an online service, in to
-      verify your identity, instead of entering a OTP from your authenticator. [SoloKey](https://solokeys.com) and
-      [NitroKey](https://www.nitrokey.com) are examples of such keys. They bring with them several security benefits,
-      since the browser communicates directly with the device and cannot be fooled as to which host is requesting
-      authentication, because the TLS certificate is checked. [This post](https://security.stackexchange.com/a/71704) is
-      a good explanation of the security of using FIDO U2F tokens. Of course it is important to store the physical key
-      somewhere safe, or keep it on your person. Some online accounts allow for several methods of 2FA to be enabled
+      For increased security, an offline password manager will give you full control over your most sensitive data,
+      such as backup codes, seed phrases, PGP revocation certificates, and backups of your primary password manager.
+      [KeePass](https://keepass.info/) is a popular choice, and it has many community forks with additional compatibility and 
+      functionality for every operating system. Running it on a device that never connects to the network is required
+      to achieve ultimate security.
 
-  - point: Consider Offline Password Manager
+  - point: Use unique usernames
     priority: Advanced
     details: >-
-      For increased security, an encrypted offline password manager will give you full control over your data.
-      [KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass) is a popular choice, with lots of [plugins](https://[KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass).info/plugins.html) and
-      community forks with additional compatibility and functionality. Popular clients include: [KeePassXC](https://keepassxc.org)
-      (desktop), [KeePassDX](https://www.keepassdx.com) (Android) and [StrongBox](https://apps.apple.com/us/app/strongbox-password-safe/id897283731)
-      (iOS). The drawback being that it may be slightly less convenient for some, and it will be up to you to back it up,
-      and store it securely
-
-  - point: Consider Unique Usernames
-    priority: Advanced
-    details: >-
-      Having different passwords for each account is a good first step, but if you also use a unique username, email or
-      phone number to log in, then it will be significantly harder for anyone trying to gain unauthorised access. The easiest
-      method for multiple emails, is using auto-generated aliases for anonymous mail forwarding. This is where
-      [anything]@yourdomain.com will arrive in your inbox, allowing you to use a different email for each account (see
-      [Mail Alias Providers](https://github.com/Lissy93/awesome-privacy#anonymous-mail-forwarding)). Usernames are easier,
-      since you can use your password manager to generate, store and auto-fill these. Virtual phone numbers can be generated
-      through your VOIP provider
-  softwareLinks:
-    - title: Password Managers
-      url: https://github.com/Lissy93/awesome-privacy#password-managers
-    - title: 2-Factor Authentication
-      url: https://github.com/Lissy93/awesome-privacy#2-factor-authentication
+      Having different passwords for each account is a first step, but if you also use a unique username, email or
+      phone number during registration, then it will be significantly harder for anyone trying to gain access. The easiest
+      method for multiple emails, is using mail forwarding. This is where [random]@service.com will arrive in your inbox, 
+      allowing you to make your real email address private. [Firefox Relay](https://relay.firefox.com/) and [DuckDuckGo Email Protection](https://duckduckgo.com/email/)
+      are examples of email forwarders. Usernames are easier, since you can use your password manager 
+      to generate, store and auto-fill these. 
 
 - title: Web Browsing
   slug: web-browsing
