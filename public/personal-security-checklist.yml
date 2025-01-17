@@ -225,8 +225,8 @@
     details: >-
       Your browser has access to everything that you do online, so avoid Google Chrome, Microsoft Edge, and Apple Safari as 
       (with default configuration) all three of them collect usage data, call home, and allow for invasive tracking. 
-      [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox) and [Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser)
-      are secure, privacy-respecting browsers. Both are fast, open source, user-friendly, and available on all
+      [Firefox](https://www.mozilla.org/en-US/firefox/) and [Brave](https://brave.com/)
+      are more secure, privacy-respecting browsers. Both are fast, open source, user-friendly, and available on all
       major operating systems. But even Firefox requires [quite a few changes](https://codeberg.org/12bytes/firefox-config-guide) 
       to achieve optimal security.
 
@@ -248,79 +248,59 @@
       browser apps have malicious intentions. Websites can see which extensions you have installed and may
       use this to enhance your fingerprint, to more accurately identify/track you. Both Firefox and Chrome
       web stores allow you to check what permissions/access rights an extension requires before you install it.
-      Check the reviews. Only install extensions you really need, and remove those which you installed just in case.
+      Check the reviews, GitHub repository, who's the author of the extension. Only install extensions you 
+      really need, and remove those which you installed just in case.
 
   - point: Check for HTTPS
     priority: Essential
     details: >-
       If you enter information on a non-HTTPS website, this data is transported unencrypted and can therefore
-      be read by anyone who intercepts it. Do not enter any data on a non-HTTPS website, but also do not let
-      the green padlock give you a false sense of security, just because a website has SSL certificate, does
-      not mean that it is legitimate or trustworthy. [HTTPS-Everywhere](https://www.eff.org/https-everywhere)
-      (developed by the [EFF](https://www.eff.org/)) used to be a browser extension/addon that automatically
-      enabled HTTPS on websites, but as of 2022 is now deprecated. In their [accouncement article](https://www.eff.org/)
-      the EFF explains that most browsers now integrate such protections. Additionally, it provides instructions
-      for [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox), Chrome, Edge and Safari browsers on how to enable their HTTPS secure protections.
+      be read and modified by anyone along the route. Do not enter any data on a non-HTTPS website, but also do not let
+      the green padlock give you a false sense of security. Just because a website has an SSL certificate does
+      not mean that it is legitimate or trustworthy. Pay attention to the domain name: sometimes the difference between
+      website.org and website.com can cost a fortune.
 
   - point: Use DNS-over-HTTPS
     priority: Essential
     details: >-
-      Traditional DNS makes requests in plain text for everyone to see. It allows for eavesdropping and
-      manipulation of DNS data through man-in-the-middle attacks. Whereas DNS-over-HTTPS performs DNS
+      Traditional DNS makes requests in plain text, allowing for eavesdropping and web-filtering by your provider,
+      which by default provides you with their DNS service. DNS-over-HTTPS performs DNS
       resolution via the HTTPS protocol, meaning data between you and your DNS resolver is encrypted.
-      A popular option is [CloudFlare](https://awesome-privacy.xyz/networking/dns-providers/cloudflare)'s [1.1.1.1](https://awesome-privacy.xyz/security-tools/mobile-apps/1.1.1.1), or compare providers- it is simple to enable in-browser.
-      Note that DoH comes with its own issues, mostly preventing web filtering.
+      A popular option is CloudFlare's [1.1.1.1](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/encrypted-dns-browsers/),
+      which has instructions for all supported browsers.
 
-  - point: Multi-[Session](https://awesome-privacy.xyz/communication/encrypted-messaging/session) Containers
+  - point: Use Multi-Account Containers
+    priority: Optional
+    details: >-
+      Using different profiles for work, general browsing, social media, and banking will reduce the number of associations 
+      that data brokers can link back to you. [Firefox Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) 
+      is a unique feature designed exactly for this purpose. Alternatively, you could use different browsers 
+      for different tasks, which is not as convenient but has the same security improvement.
+
+  - point: Use Incognito mode with caution
     priority: Essential
     details: >-
-      Compartmentalisation is really important to keep different aspects of your browsing separate. For
-      example, using different profiles for work, general browsing, social media, online shopping etc
-      will reduce the number associations that data brokers can link back to you. One option is to make
-      use of [Firefox Containers](https://awesome-privacy.xyz/security-tools/browser-extensions/firefox-multi-account-containers)
-      which is designed exactly for this purpose.
-      Alternatively, you could
-      use different browsers for different tasks
-      ([Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser),
-      [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox),
-      [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) etc).
+      When you're in a private/incognito window, it will prevent browser history, cookies, and some data from being 
+      saved, but you are still easily tracked unless you close all other browser windows and then connect to a VPN. 
+      Even then, it is not fool-proof, so keep in mind these functions are not really making your actions anonymous.
 
-  - point: Use Incognito
+  - point: Understand your browser's fingerprint
     priority: Essential
     details: >-
-      When using someone else's machine, ensure that you're in a private/ incognito session. This will
-      prevent browser history, cookies and some data being saved, but is not fool-proof- you can still
-      be tracked.
+      Browser fingerprinting is an incredibly accurate method of tracking, allowing a website to identify you
+      based on your device information—even after you clear all cookies and session data. You can view your fingerprint
+      at [amiunique.org](https://amiunique.org) to see what parameters are evaluated. There is no perfect solution against
+      fingerprinting, but using the Tor Browser and disabling JavaScript in your settings will reduce the data
+      your browser leaks—although this will break many websites.
 
-  - point: Understand Your Browser Fingerprint
+  - point: Block third-party trackers
     priority: Essential
     details: >-
-      Browser Fingerprinting is an incredibly accurate method of tracking, where a website identifies you
-      based on your device information. You can view your fingerprint at amiunique.org- The aim is to be
-      as un-unique as possible.
-
-  - point: Manage Cookies
-    priority: Essential
-    details: >-
-      Clearing cookies regularly is one step you can take to help reduce websites from tracking you.
-      Cookies may also store your session token, which if captured, would allow someone to access your
-      accounts without credentials. To mitigate this you should clear cookies often.
-
-  - point: Block Third-Party Cookies
-    priority: Essential
-    details: >-
-      Third-party cookies placed on your device by a website other than the one you’re visiting. This
-      poses a privacy risk, as a 3rd entity can collect data from your current session. This guide explains
-      how you can disable 3rd-party cookies, and you can check here ensure this worked.
-
-  - point: Block Third-Party Trackers
-    priority: Essential
-    details: >-
-      Blocking trackers will help to stop websites, advertisers, analytics and more from tracking you in
-      the background. [Privacy Badger](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-badger),
-      [DuckDuckGo Privacy Essentials](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-essentials),
-      [uBlock Origin](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) and uMatrix (advanced)
-      are all very effective, open source tracker-blockers available for all major browsers.
+      Blocking trackers will help prevent websites, advertisers, analytics, and more from tracking you on
+      all websites you visit. [Privacy Badger](https://privacybadger.org/),
+      [DuckDuckGo Privacy Essentials](https://github.com/duckduckgo/duckduckgo-privacy-extension),
+      and [uBlock Origin](https://github.com/gorhill/uBlock) 
+      are all very effective, open-source tracker blockers available for all major browsers.
 
   - point: Beware of Redirects
     priority: Optional
