@@ -487,131 +487,75 @@
   slug: messaging
   description: Keeping your communications private and secure
   icon: messaging
-  intro: ''
+  color: cyan
+  intro: >-
+    Every message and photo you send has a chance to become publicly available. Don't write anything you'd regret
+    and learn how to decrease that chance.
+
   checklist:
-  - point: Only Use Fully End-to-End Encrypted Messengers
+  - point: Use End-to-End Encrypted (E2EE) messengers
     priority: Essential
     details: >-
-      End-to-end encryption is a system of communication where messages are encrypted on your device and
-      not decrypted until they reach the intended recipient. This ensures that any actor who intercepts
-      traffic cannot read the message contents, nor can anybody with access to the central servers where
-      data is stored.
+      End-to-end encryption ensures that messages are encrypted on your device and remain encrypted until 
+      they reach the intended recipient. This guarantees that any intercepted traffic cannot be read by 
+      unauthorized parties, including those with access to the servers where the conversation data is stored.
 
-  - point: Use only Open Source Messaging Platforms
+  - point: Use Open Source messengers
     priority: Essential
     details: >-
-      If code is open source then it can be independently examined and audited by anyone qualified to do
-      so, to ensure that there are no backdoors, vulnerabilities, or other security issues.
+      If the code is open source then it can be independently examined and audited by anyone qualified to do
+      so, to ensure that there are no backdoors, vulnerabilities, or other security issues. Most popular 
+      projects will publish results of such reviews.
 
-  - point: Use a "Trustworthy" Messaging Platform
+  - point: Use "trustworthy" messengers
     priority: Essential
     details: >-
-      When selecting an encrypted messaging app, ensure it's fully open source, stable, actively maintained,
-      and ideally backed by reputable developers.
+      When selecting an encrypted messaging app, ensure its server is open source, stable, actively maintained,
+      and ideally backed by reputable developers. Some good options in 2025 are [Matrix](https://matrix.org/),
+      which has many clients available, all based on a secure open source protocol, [Signal](https://signal.org/),
+      and [Jami](https://jami.net/). [Tox](https://tox.chat/) and [Session](https://getsession.org/) don't even 
+      have a centralized server.
 
-  - point: Check Security Settings
+  - point: Check security settings
     priority: Essential
     details: >-
-      Enable security settings, including contact verification, security notifications, and encryption.
-      Disable optional non-security features such as read receipt, last online, and typing notification.
+      Go through the security and privacy settings in your messenger, including contact verification, security 
+      notifications, and encryption. Disable optional privacy-leaking features such as read receipts, last online, 
+      and typing notifications.
 
-  - point: Ensure your Recipients Environment is Secure
+  - point: Secure group chats
     priority: Essential
     details: >-
-      Your conversation can only be as secure as the weakest link. Often the easiest way to infiltrate a
-      communications channel is to target the individual or node with the least protection.
+      Don't use Telegram: every group chat in it is plain text unencrypted, just waiting to leak. For encrypted 
+      groups in Matrix/Signal/Tox, the risk of compromise rises the more participants are in a group. Periodically 
+      check that all members should still be there.
 
-  - point: Disable Cloud Services
+  - point: Understand media metadata
     priority: Essential
     details: >-
-      Some mobile messaging apps offer a web or desktop companion. This not only increases attack surface but
-      it has been linked to several critical security issues, and should therefore be avoided, if possible.
+      Metadata is additional information attached to media. When you send a photo, audio recording, video, or 
+      document you may be revealing more than you intended to: date, location, information identifying you
+      or device may be included with it.
 
-  - point: Secure Group Chats
-    priority: Essential
-    details: >-
-      The risk of compromise rises exponentially, the more participants are in a group, as the attack surface
-      increases. Periodically check that all participants are legitimate.
-
-  - point: Create a Safe Environment for Communication
-    priority: Essential
-    details: >-
-      There are several stages where your digital communications could be monitored or intercepted. This includes:
-      your or your participants' device, your ISP, national gateway or government logging, the messaging provider,
-      the servers.
-
-  - point: Agree on a Communication Plan
+  - point: Verify your correspondent
     priority: Optional
     details: >-
-      In certain situations, it may be worth making a communication plan. This should include primary and backup
-      methods of securely getting in hold with each other.
+      Prior to any financial transaction initiated in messenger it's always good to ensure you are talking to the 
+      intended recipient, and that they have not been compromised. Make a call, find another contact through friends
+      or colleagues.
 
-  - point: Strip Meta-Data from Media
-    priority: Optional
-    details: >-
-      Metadata is "Data about Data" or additional information attached to a file or transaction. When you send a
-      photo, audio recording, video, or document you may be revealing more than you intended to.
-
-  - point: Defang URLs
-    priority: Optional
-    details: >-
-      Sending links via various services can unintentionally expose your personal information. This is because,
-      when a thumbnail or preview is generated- it happens on the client-side.
-
-  - point: Verify your Recipient
-    priority: Optional
-    details: >-
-      Always ensure you are talking to the intended recipient, and that they have not been compromised. One method
-      for doing so is to use an app which supports contact verification.
-
-  - point: Enable Ephemeral Messages
+  - point: Enable self-destructing messages
     priority: Optional
     details: >-
       Self-destructing messages is a feature that causes your messages to automatically delete after a set amount
-      of time. This means that if your device is lost, stolen, or seized, an adversary will only have access to the
-      most recent communications.
+      of time. Together with encryption this means that if your device is lost, stolen, or seized, an adversary 
+      will only have access to the most recent communications.
 
   - point: Avoid SMS
     priority: Optional
     details: >-
-      SMS may be convenient, but it's not secure. It is susceptible to threats such as interception, sim swapping,
-      manipulation, and malware.
-
-  - point: Watch out for Trackers
-    priority: Optional
-    details: >-
-      Be wary of messaging applications with trackers, as the detailed usage statistics they collect are often very
-      invasive, and can sometimes reveal your identity as well as personal information that you would otherwise not
-      intend to share.
-
-  - point: Consider Jurisdiction
-    priority: Advanced
-    details: >-
-      The jurisdictions where the organisation is based, and data is hosted should also be taken into account.
-
-  - point: Use an Anonymous Platform
-    priority: Advanced
-    details: >-
-      If you believe you may be targeted, you should opt for an anonymous messaging platform that does not require
-      a phone number, or any other personally identifiable information to sign up or use.
-
-  - point: Ensure Forward Secrecy is Supported
-    priority: Advanced
-    details: >-
-      Opt for a platform that implements forward secrecy. This is where your app generates a new encryption key
-      for every message.
-
-  - point: Consider a Decentralized Platform
-    priority: Advanced
-    details: >-
-      If all data flows through a central provider, you have to trust them with your data and meta-data. You cannot
-      verify that the system running is authentic without back doors.
-  softwareLinks:
-    - title: Secure Messaging Apps
-      url: https://github.com/Lissy93/awesome-privacy#encrypted-messaging
-    - title: P2P Messaging Platforms
-      url: https://github.com/Lissy93/awesome-privacy#p2p-messaging
-  color: cyan
+      SMS is not secure. It is susceptible to threats such as interception, SIM swapping, SIM porting, and smartphone 
+      malware. It's ok to SMS "Message me on Matrix: https://matrix.to/".
 
 - title: Social Media
   slug: social-media
