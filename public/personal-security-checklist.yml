@@ -106,8 +106,9 @@
     priority: Optional
     details: >-
       Browsers offer to save your credentials when you log into a site. Don’t allow this, as they are not always encrypted, 
-      hence could allow someone to gain access into your accounts. Instead use a dedicated password manager to store 
-      (and auto-fill) your passwords. Password manager extension in browser will provide same experience in a secure way.
+      hence could allow someone to gain access into your accounts. [Example toolkit](https://github.com/moonD4rk/HackBrowserData). 
+      Instead use a dedicated password manager to store (and auto-fill) your passwords. Password manager extension in browser 
+      will provide great user experience in a secure way.
 
   - point: Avoid logging in on someone else’s device
     priority: Optional
@@ -190,6 +191,7 @@
   slug: web-browsing
   description: Avoiding tracking, censorship, and data collection online
   icon: browser
+  color: emerald
   intro: >-
     Most websites on the internet will use some form of tracking, often to gain
     insight into their users' behavior and preferences. This data can be incredibly
@@ -251,6 +253,12 @@
       Check the reviews, GitHub repository, who's the author of the extension. Only install extensions you 
       really need, and remove those which you installed just in case.
 
+  - point: Disable password storage in browser
+    priority: Essential
+    details: >-
+      Do not allow your browser to store usernames and passwords. These can be easily accessed or exported.
+      [Example tool](https://github.com/moonD4rk/HackBrowserData). Instead use a [password manager](/checklist/authentication/#done-use-a-password-manager).
+
   - point: Check for HTTPS
     priority: Essential
     details: >-
@@ -290,8 +298,8 @@
       Browser fingerprinting is an incredibly accurate method of tracking, allowing a website to identify you
       based on your device information—even after you clear all cookies and session data. You can view your fingerprint
       at [amiunique.org](https://amiunique.org) to see what parameters are evaluated. There is no perfect solution against
-      fingerprinting, but using the Tor Browser and disabling JavaScript in your settings will reduce the data
-      your browser leaks—although this will break many websites.
+      fingerprinting, but using the [Tor Browser](https://www.torproject.org/) and disabling JavaScript in your settings 
+      will reduce the data your browser leaks; although this will break many websites.
 
   - point: Block third-party trackers
     priority: Essential
@@ -302,172 +310,70 @@
       and [uBlock Origin](https://github.com/gorhill/uBlock) 
       are all very effective, open-source tracker blockers available for all major browsers.
 
-  - point: Beware of Redirects
-    priority: Optional
+  - point: Beware of redirects
+    priority: Essential
     details: >-
-      While some redirects are harmless, others, such as Unvalidated redirects are used in phishing attacks,
-      it can make a malicious link seem legitimate. If you are unsure about a redirect URL, you can check
-      where it forwards to with a tool like RedirectDetective.
+      While some redirects are harmless, others, such as unvalidated redirects, are used in phishing attacks,
+      making a malicious link seem legitimate. If you are unsure about a redirect URL, you can check
+      where it forwards to with a tool like [RedirectDetective](https://redirectdetective.com/). This applies
+      to cases where you see a long URL with parameters you don't understand, which can look like 
+      `https://legitimate-site.com/something/is?suspicious=b2ggeWVzIGl0J3MgZGVmaW5pdGVseSBzdXNwaWNpb3VzJw==`.
 
-  - point: Do Not Sign Into Your Browser
-    priority: Optional
+  - point: Block web notifications
+    priority: Essential
     details: >-
-      Many browsers allow you to sign in, in order to sync history, bookmarks and other browsing data across
-      devices. However this not only allows for further data collection, but also increases attack surface
-      through providing another avenue for a malicious actor to get hold of personal information.
+      Browser push notifications are a common method for criminals to spam you and make you click their links, 
+      as it is easy to spoof the source. Be aware of this; if a website asks you for permission to "Show notifications", 
+      you should block it in 99% of cases. [How the prompt looks like?](https://d24oheizjk2k1o.cloudfront.net/wp-content/uploads/2017/12/25220742/smaller_hero-image-dangers-of-installing-web-push-incorrectly.png). 
+      For instructions on disabling browser notifications, see [this article](https://www.pcmag.com/how-to/how-to-disable-web-notifications).
 
-  - point: Disallow Prediction Services
-    priority: Optional
-    details: >-
-      Some browsers allow for prediction services, where you receive real-time search results or URL auto-fill.
-      If this is enabled then data is sent to Google (or your default search engine) with every keypress,
-      rather than when you hit enter.
-
-  - point: Avoid G Translate for Webpages
-    priority: Optional
-    details: >-
-      When you visit a web page written in a foreign language, you may be prompted to install the Google Translate
-      extension. Be aware that Google collects all data (including input fields), along with details of the current
-      user. Instead use a translation service that is not linked to your browser.
-
-  - point: Disable Web Notifications
-    priority: Optional
-    details: >-
-      Browser push notifications are a common method for criminals to encourage you to click their link, since
-      it is easy to spoof the source. Be aware of this, and for instructions on disabling browser notifications,
-      see this article.
-
-  - point: Disable Automatic Downloads
+  - point: Disable automatic downloads
     priority: Optional
     details: >-
       Drive-by downloads is a common method of getting harmful files onto a users device. This can be mitigated
-      by disabling auto file downloads, and be cautious of websites which prompt you to download files unexpectedly.
+      by disabling auto file downloads, and being cautious of websites which prompt you to download files unexpectedly.
+      Any downloaded file can be checked for obvious infection at [Virus Total](https://www.virustotal.com/),
+      which will find known virus signatures. Or it could be opened on a separate virtual machine outside of
+      your computer at [Any.run](https://app.any.run/), allowing you to safely examine any malware.
 
-  - point: Disallow Access to Sensors
+  - point: Disallow access to sensors
     priority: Optional
     details: >-
-      Mobile websites can tap into your device sensors without asking. If you grant these permissions to your
-      browser once, then all websites are able to use these capabilities, without permission or notification.
+      Mobile websites can tap into some of your device sensors without asking. If you grant these permissions to your
+      browser once, then all websites are able to use these capabilities, without permission or notification. 
+      Such sensors allow to detect device movement and orientation, track position and ambient lightning changes.
 
-  - point: Disallow Location
+  - point: Disallow location access
     priority: Optional
     details: >-
-      Location Services lets sites ask for your physical location to improve your experience. This should be
-      disabled in settings. Note that there are still other methods of determining your approximate location.
+      Location Services let sites ask for your physical location. This should be disabled in settings as it 
+      will give the exact location to meters. On every legitimate website, there would be a way to input the address
+      instead of using the physical location. Note that there are still other methods of determining your approximate location.
 
-  - point: Disallow Camera/ Microphone access
+  - point: Disallow camera/microphone access
     priority: Optional
     details: >-
       Check browser settings to ensure that no websites are granted access to webcam or microphone. It may also
       be beneficial to use physical protection such as a webcam cover and microphone blocker.
 
-  - point: Disable Browser Password Saves
-    priority: Optional
-    details: >-
-      Do not allow your browser to store usernames and passwords. These can be easily viewed or accessed.
-      Instead use a password manager.
-
-  - point: Disable Browser Autofill
-    priority: Optional
-    details: >-
-      Turn off autofill for any confidential or personal details. This feature can be harmful if your browser
-      is compromised in any way. Instead, consider using your password manager's Notes feature.
-
-  - point: Protect from Exfil Attack
-    priority: Optional
-    details: >-
-      The CSS Exfiltrate attack is a method where credentials and other sensitive details can be snagged with
-      just pure CSS. You can stay protected,
-      with the [CSS Exfil Protection](https://awesome-privacy.xyz/security-tools/browser-extensions/css-exfil-protection) plugin.
-
-  - point: Deactivate ActiveX
-    priority: Optional
-    details: >-
-      ActiveX is a browser extension API that built into Microsoft IE, and enabled by default. It's not commonly
-      used anymore, but since it gives plugins intimate access rights, and can be dangerous, therefore you should
-      disable it.
-
-  - point: Disable WebRTC
-    priority: Optional
-    details: >-
-      WebRTC allows high-quality audio/video communication and peer-to-peer file-sharing straight from the
-      browser. However it can pose as a privacy leak. To learn more, check out this guide.
-
-  - point: Spoof HTML5 Canvas Sig
-    priority: Optional
-    details: >-
-      Canvas Fingerprinting allows websites to identify and track users very accurately. You can use the
-      Canvas-Fingerprint-Blocker extension to spoof your fingerprint or
-      use [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor).
-
-  - point: Spoof User Agent
-    priority: Optional
-    details: >-
-      The user agent tells the website what device, browser and version you are using. Switching user agent
-      periodically is one small step you can take to become less unique.
-
-  - point: Disregard DNT
-    priority: Optional
-    details: >-
-      Enabling Do Not Track has very limited impact, since many websites do not respect or follow this. Since
-      it is rarely used, it may also add to your signature, making you more unique.
-
-  - point: Prevent HSTS Tracking
-    priority: Optional
-    details: >-
-      HSTS was designed to help secure websites, but privacy concerns have been raised as it allowed site
-      operators to plant super-cookies. It can be disabled by visiting chrome://net-internals/#hsts in
-      Chromium-based browsers.
-
-  - point: Prevent Automatic Browser Connections
-    priority: Optional
-    details: >-
-      Even when you are not using your browser, it may call home to report on usage activity, analytics and
-      diagnostics. You may wish to disable some of this, which can be done through the settings.
-
-  - point: Enable 1st-Party Isolation
-    priority: Optional
-    details: >-
-      [First Party Isolation](https://awesome-privacy.xyz/security-tools/browser-extensions/first-party-isolation) means
-      that all identifier sources and browser state are scoped using the URL bar
-      domain, this can greatly reduce tracking.
-
-  - point: Strip Tracking Params from URLs
+  - point: Strip tracking params from URLs
     priority: Advanced
     details: >-
-      Websites often append additional GET parameters to URLs that you click, to identify information like
-      source/referrer. You can sanitize manually,
-      or use an extension like [ClearURLs](https://awesome-privacy.xyz/security-tools/browser-extensions/clearurls) to strip tracking data
-      from URLs automatically.
+      Websites often append additional parameters to URLs that you share, to link you with the recipient.
+      Example: `https://youtu.be/VTsBP21-XpI?si=1aBj9DFSaHk_XorM` has `?si=1aBj9DFSaHk_XorM`, 
+      `https://www.instagram.com/reel/DFAdz9HNRzu/?igsh=MXUxbnJ1czZlMWg0Ng==` has `?igsh=MXUxbnJ1czZlMWg0Ng==`
+      which you should remove before sharing. You can sanitize manually, or use an extension like 
+      [ClearURLs](https://github.com/ClearURLs/Addon) to strip tracking data from URLs automatically.
 
-  - point: First Launch Security
+  - point: Install the Tor Browser
     priority: Advanced
     details: >-
-      After installing a web browser, the first time you launch it (prior to configuring its privacy settings),
-      most browsers will call home. Therefore, after installing a browser, you should first disable your internet
-      connection, then configure privacy options before reenabling your internet connectivity.
-
-  - point: Use The Tor Browser
-    priority: Advanced
-    details: >-
-      The [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) Project provides a browser that encrypts and routes your traffic through multiple nodes, keeping
-      users safe from interception and tracking. The main drawbacks are speed and user experience.
-
-  - point: Disable JavaScript
-    priority: Advanced
-    details: >-
-      Many modern web apps are JavaScript-based, so disabling it will greatly decrease your browsing experience.
-      But if you really want to go all out, then it will really reduce your attack surface.
-  softwareLinks:
-    - title: Privacy Browsers
-      url: https://github.com/Lissy93/awesome-privacy#browsers
-    - title: Search Engines
-      utl: https://github.com/Lissy93/awesome-privacy#search-engines
-    - title: Browser Extensions
-      url: https://github.com/Lissy93/awesome-privacy#browser-extensions
-    - title: Browser & Bookmark Sync
-      url: https://github.com/Lissy93/awesome-privacy#browser-sync
-  color: emerald
+      The [Tor Browser](https://www.torproject.org/) provides a browser that encrypts and routes your traffic 
+      through multiple nodes, keeping users safe from regular technics of interception and tracking. The main 
+      drawbacks are speed and user experience. Tor Browser could connect to anonymously hosted websites
+      which end in `.onion`. For additional security consider using [Tails (The Amnesic Incognito Live System)](https://tails.net/)
+      which boots from USB and does not write to the hard drive, ensuring no residual data is left behind 
+      after reboot. It includes Tor Browser pre-installed for anonymous web browsing, and other encryption tools.
 
 - title: Email
   slug: email
