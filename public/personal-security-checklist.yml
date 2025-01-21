@@ -561,122 +561,108 @@
   slug: social-media
   description: Minimizing the risks associated with using online communities
   icon: social
+  color: blue  
   intro: >
-    Online communities have existed since the invention of the internet, and give
-    people around the world the opportunity to connect, communicate and share.
+    Online communities have existed since the invention of the internet, giving
+    people around the world the opportunity to connect, communicate, and share.
     Although these networks are a great way to promote social interaction and
-    bring people together, that have a dark side - there are some serious
-    [Privacy Concerns with Social Networking Services](https://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services),
-    and these social networking sites are owned by private corporations,
-    and that they make their money by collecting data about individuals and
-    selling that data on, often to third party advertisers.
-
+    bring people together, they have a dark side - there are some serious
+    [privacy concerns with social networking services](https://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services).
+    
     Secure your account, lock down your privacy settings, but know that even
-    after doing so, all data intentionally and non-intentionally uploaded is
+    after doing so, all data intentionally and unintentionally uploaded is
     effectively public. If possible, avoid using conventional social media networks.
   checklist:
-  - point: Secure your Account
+  - point: Secure your accounts
     priority: Essential
     details: >-
-      Social media profiles get stolen or taken over all too often. To protect your account: use a unique
-      and strong password, and enable 2-factor authentication.
+      Social media profiles get stolen. To protect your account: use a unique and strong password, and enable 
+      2-factor authentication. Never add your phone number in social media profiles: automatic scanners search 
+      by known phone numbers to find linked profiles. You can reset a Twitter account password with SMS even 
+      if 2FA is enabled, as long as a phone number exists on the account.
 
-  - point: Check Privacy Settings
+  - point: Check privacy settings
     priority: Essential
     details: >-
-      Most social networks allow you to control your privacy settings. Ensure that you are comfortable with
-      what data you are currently exposing and to whom.
+      Social media networks allow you to control your privacy settings. By default it would be too open, offering
+      you to share your profile and actions with the entire world. Ensure that you are limiting what data you are 
+      currently exposing and to whom, also this should be discussed in your family circle: often non-public people
+      are easily found through their relatives.
 
-  - point: Think of All Interactions as Public
+  - point: Think of all interactions as public
     priority: Essential
     details: >-
-      There are still numerous methods of viewing a users 'private' content across many social networks.
-      Therefore, before uploading, posting or commenting on anything, think "Would I mind if this was totally public?"
+      No, the 'private' group is not really private. Every comment, like, and message are displayed to people and
+      robots, and you cannot have control over it. Therefore, before uploading, posting, or commenting on anything, 
+      think, "Would I mind if this was totally public?".
 
-  - point: Think of All Interactions as Permanent
+  - point: Think of all interactions as permanent
     priority: Essential
     details: >-
-      Pretty much every post, comment, photo etc is being continuously backed up by a myriad of third-party
-      services, who archive this data and make it indexable and publicly available almost forever.
+      Pretty much every post, comment, photo, etc., is continuously backed up by third-party services, who 
+      archive scraped data and make it indexable and available for public or purchase. When you delete something,
+      it's hidden from you, but not from moderators and admins – the data will remain there, and you cannot have 
+      control over it.
 
-  - point: Don't Reveal too Much
+  - point: Don't reveal too much
     priority: Essential
     details: >-
       Profile information creates a goldmine of info for hackers, the kind of data that helps them personalize
-      phishing scams. Avoid sharing too much detail (DoB, Hometown, School etc).
-
-  - point: Be Careful what you Upload
-    priority: Essential
-    details: >-
-      Status updates, comments, check-ins and media can unintentionally reveal a lot more than you intended
-      them to. This is especially relevant to photos and videos, which may show things in the background.
-
-  - point: Don't Share Email or Phone Number
-    priority: Essential
-    details: >-
+      phishing scams. Avoid sharing too much detail (DoB, Hometown, School etc). 
       Posting your real email address or mobile number, gives hackers, trolls and spammers more munition to
-      use against you, and can also allow separate aliases, profiles or data points to be connected.
+      use against you, and can also allow to link your profiles in different systems.
 
-  - point: Don't Grant Unnecessary Permissions
+  - point: Be careful what you upload
     priority: Essential
     details: >-
-      By default many of the popular social networking apps will ask for permission to access your contacts,
-      call log, location, messaging history etc. If they don’t need this access, don’t grant it.
+      Media you upload can unintentionally reveal a lot more than you intended. This is especially relevant 
+      to photos and videos, which show things in the background. Most smartphones and cameras automatically 
+      attach a comprehensive set of additional data (called EXIF metadata) to each photograph. Even if application
+      was denied access to your location, it will guess your city from your IP address.
 
-  - point: Be Careful of 3rd-Party Integrations
+  - point: Don't grant unnecessary permissions
     priority: Essential
     details: >-
-      Avoid signing up for accounts using a Social Network login, revoke access to social apps you no longer
-      use.
+      Many of the popular social networking apps will ask for permission to access your contacts,
+      location, media library, etc. They don’t need this access, don’t grant it.
 
-  - point: Avoid Publishing Geo Data while still Onsite
+  - point: Avoid third-party integrations
     priority: Essential
     details: >-
-      If you plan to share any content that reveals a location, then wait until you have left that place.
-      This is particularly important when you are taking a trip, at a restaurant, campus, hotel/resort, public
-      building or airport.
+      If you sign up for accounts using a social network (Sign in with Twitter, Login with Facebook, etc.), 
+      you risk losing access to them if your profile is blocked due to a report or policy violation.
+      Third-party integrations can download and cache your profile data and connections, making it difficult 
+      or impossible to remove later. Regularly check and revoke access to social apps you don't actively use, 
+      as they could be sold to a scam company along with all user data.
 
-  - point: Remove metadata before uploading media
+  - point: Avoid publishing your location while still there
+    priority: Essential
+    details: >-
+      If you still plan to share any content that reveals a location, then wait until you have left that place.
+      Don't publish your plans in advance. This is particularly important when you are taking a trip, at a 
+      restaurant, campus, hotel/resort, public building or airport. Every international tourist is deemed 
+      a wealthy target by local criminals.
+
+  - point: Consider having a fake profile
     priority: Optional
     details: >-
-      Most smartphones and some cameras automatically attach a comprehensive set of additional data (called
-      EXIF data) to each photograph. Remove this data before uploading.
+      If you just want to connect and comment and do not intend on being easy to find by all your ex-schoolmates: 
+      consider using an alias name, and false contact details. 
 
-  - point: Implement Image Cloaking
+  - point: Implement image cloaking
     priority: Advanced
     details: >-
-      Tools like Fawkes can be used to very subtly, slightly change the structure of faces within photos in a
-      way that is imperceptible by humans, but will prevent facial recognition systems from being able to recognize
-      a given face.
+      Tools like [Fawkes](https://sandlab.cs.uchicago.edu/fawkes/) can be used to very subtly, slightly change 
+      the structure of faces within photos in a way that is imperceptible by humans, but will prevent facial 
+      recognition systems from being able to recognize a given face.
 
-  - point: Consider Spoofing GPS in home vicinity
-    priority: Advanced
-    details: >-
-      Even if you yourself never use social media, there is always going to be others who are not as careful,
-      and could reveal your location.
-
-  - point: Consider False Information
-    priority: Advanced
-    details: >-
-      If you just want to read, and do not intend on posting too much- consider using an alias name, and false
-      contact details.
-
-  - point: Don’t have any social media accounts
+  - point: Don’t have social media accounts
     priority: Advanced
     details: >-
       Social media is fundamentally un-private, so for maximum online security and privacy, avoid using any
-      mainstream social networks.
-
-  softwareLinks:
-    - title: Alternative Social Media
-      url: https://github.com/Lissy93/awesome-privacy#social-networks
-    - title: Alternative Video Platforms
-      url: https://github.com/Lissy93/awesome-privacy#video-platforms
-    - title: Alternative Blogging Platforms
-      url: https://github.com/Lissy93/awesome-privacy#blogging-platforms
-    - title: News Readers and Aggregation
-      url: https://github.com/Lissy93/awesome-privacy#news-readers-and-aggregation
-  color: blue
+      mainstream social networks. These social networking sites are owned by private corporations,
+      and they make their money by collecting data about individuals, analyzing and
+      selling that data, often to third-party advertisers.
 
 - title: Networks
   slug: networks
