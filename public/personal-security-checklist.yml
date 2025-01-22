@@ -784,7 +784,7 @@
       to a level that still provides coverage for your flat but doesn’t reach unnecessary areas. Use a second, 
       low-power access point with a reduced range for remote areas (e.g., your cellar) if you still need coverage there. 
 
- - point: Whitelist MAC addresses
+  - point: Whitelist MAC addresses
     priority: Advanced
     details: >-
       You can whitelist MAC addresses in your router settings, disallowing any unknown devices to 
