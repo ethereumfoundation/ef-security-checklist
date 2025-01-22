@@ -668,6 +668,7 @@
   slug: networks
   description: Safeguarding your network traffic
   icon: network
+  color: violet
   intro: >
     This section covers how you connect your devices to the internet securely,
     including configuring your router and setting up a VPN.
@@ -675,169 +676,126 @@
   - point: Use a VPN
     priority: Essential
     details: >-
-      Use a reputable, paid-for VPN. This can help protect sites you visit from logging your real IP, reduce
-      the amount of data your ISP can collect, and increase protection on public WiFi.
+      Use a reputable, paid VPN. This can help protect sites you visit from logging your real IP, reduce
+      the amount of data your ISP can collect, and increase protection on public Wi-Fi. All EFers are
+      eligible for a VPN license, please contact [opsec@ethereum.org](mailto:opsec@ethereum.org) to get it.
 
-  - point: Change your Router Password
+  - point: Change your router password
     priority: Essential
     details: >-
-      After getting a new router, change the password. Default router passwords are publicly available,
-      meaning anyone within proximity would be able to connect.
+      After getting a new router, change the admin password (it's not same thing as the Wi-Fi password). 
+      Default router passwords are publicly available, meaning anyone within proximity would be able to connect.
 
-  - point: Use WPA2, and a strong password
+  - point: Use WPA2/WPA3 and a strong password
     priority: Essential
     details: >-
-      There are different authentication protocols for connecting to WiFi. Currently, the most secure options
-      are WPA2 and WPA3 (on newer routers).
+      When configuring a router, there are different authentication protocols for connecting to Wi-Fi. 
+      Currently, the most secure options are WPA2 and WPA3. Disable Wi-Fi Protected Setup (WPS)
+      if it's enabled. Set a nice password with 3-5 words in it, easy to dictate and type.
 
   - point: Keep router firmware up-to-date
     priority: Essential
     details: >-
       Manufacturers release firmware updates that fix security vulnerabilities, implement new standards, and
-      sometimes add features or improve the performance of your router.
+      sometimes add features or improve the performance of your router. Add a calendar event to check for updates
+      once in 6 months.
 
-  - point: Implement a Network-Wide VPN
-    priority: Optional
+  - point: Don't reveal info in network name
+    priority: Essential
     details: >-
-      If you configure your VPN on your router, firewall, or home server, then traffic from all devices will
-      be encrypted and routed through it, without needing individual VPN apps.
-
-  - point: Protect against DNS leaks
-    priority: Optional
-    details: >-
-      When using a VPN, it is extremely important to exclusively use the DNS server of your VPN provider or
-      secure service.
+      You should use a Wi-Fi network name in SSID that does not identify you, it shouldn't include your flat
+      number/address or device model number.
 
   - point: Use a secure VPN Protocol
-    priority: Optional
+    priority: Essential
     details: >-
       OpenVPN and WireGuard are open source, lightweight, and secure tunneling protocols. Avoid using PPTP
-      or SSTP.
+      or SSTP if you set up your own VPN.
 
-  - point: Secure DNS
-    priority: Optional
+  - point: Secure the DNS
+    priority: Essential
     details: >-
-      Use DNS-over-HTTPS which performs DNS resolution via the HTTPS protocol, encrypting data between you
-      and your DNS resolver.
+      Traditional DNS makes requests in plain text, allowing for eavesdropping and web-filtering by your provider,
+      which by default provides you with their DNS service. At least you should switch the DNS server.
+      A popular option is CloudFlare's [1.1.1.1](https://developers.cloudflare.com/1.1.1.1/setup/),
+      which has instructions for many devices. If possible, use DNS-over-HTTPS which performs DNS resolution 
+      via the HTTPS protocol, encrypting data between you and your DNS resolver.
 
   - point: Avoid the free router from your ISP
+    priority: Essential
+    details: >-
+      Typically they’re manufactured cheaply in bulk, with provider-managed firmware that doesn't receive 
+      regular security updates.
+
+  - point: Disable unused services on your router
+    priority: Essential
+    details: >-
+      Modern mid- and high-end routers have tons of functionality: it could be running SSH, file sharing services,
+      torrent client, etc. These services should never be exposed to the WAN/Internet and should also be disabled 
+      in the router admin. You don't want to depend on some older software versions included with router, these
+      will lack updates and required maintenance patches.
+
+  - point: Don't have open ports
+    priority: Essential
+    details: >-
+      Close any open ports on your router. First, check the Port Forwarding or Virtual Server tabs in the router admin.
+      Some routers also have a “Port Status” or “UPnP” (Universal Plug and Play) section that displays active ports. 
+      When protocols such as PING, Telnet, SSH, UPnP, and HNAP, etc., are enabled, they allow your router to accept 
+      connections from anywhere in the world. If your router has a device in a DMZ (Demilitarized Zone), it would 
+      have unrestricted port access from the Internet. Remove devices from the DMZ unless you run specialized server
+      software on them. Disabling UPnP could also negatively affect torrent clients, some P2P applications, and 
+      online real-time games on devices in your local network.
+
+  - point: Set up a network-wide VPN
     priority: Optional
     details: >-
-      Typically they’re manufactured cheaply in bulk in China, with insecure propriety firmware that doesn't
-      receive regular security updates.
+      If you configure the VPN on your router, then traffic from all devices will be encrypted and routed 
+      through it, without needing individual VPN apps on each device.
 
-  - point: Whitelist MAC Addresses
+  - point: Use a guest network for guests
     priority: Optional
     details: >-
-      You can whitelist MAC addresses in your router settings, disallowing any unknown devices to immediately
-      connect to your network, even if they know your credentials.
+      Do not grant access to your primary Wi-Fi network to visitors, as it enables them to interact with other
+      devices on the network. You don't want people to connect to your NAS or mess with a smart TV in your 
+      main network. Set up a guest network with device isolation in router settings; this is a common option
+      in all mid-to-high level routers.
 
-  - point: Change the Router’s Local IP Address
+  - point: Change your router's default IP
     priority: Optional
     details: >-
-      It is possible for a malicious script in your web browser to exploit a cross-site scripting vulnerability,
-      accessing known-vulnerable routers at their local IP address and tampering with them.
+      Modifying your router default IP address in the admin panel will make it more difficult for malicious scripts
+      targeting local IP addresses, like 192.168.0.1, in hope to find an unpatched device with known critical
+      vulnerabilities.
 
-  - point: Don't Reveal Personal Info in SSID
+  - point: Disable unused remote access features
     priority: Optional
     details: >-
-      You should update your network name, choosing an SSID that does not identify you, include your flat
-      number/address, and does not specify the device brand/model.
+      Routers often have a remote management feature accessible via the internet. Most people don’t need this, 
+      turn it off to prevent unauthorized access. Disable cloud-based management, where you can control
+      your router on manufacturer's website or in a mobile application. These expose your network to potential 
+      attacks.
 
-  - point: Opt-Out Router Listings
+  - point: Manage Wi-Fi signal range
     priority: Optional
     details: >-
-      WiFi SSIDs are scanned, logged, and then published on various websites, which is a serious privacy
-      concern for some.
+      It's common to set your router's range to the max so that you can still watch 4K videos in that remote cellar,
+      but if you reside in a smaller flat, your attack surface is increased when your Wi-Fi network can be picked 
+      up on the street. Look for options like “Transmit Power,” “Tx Power,” or “Signal Strength.”. Adjust the power 
+      to a level that still provides coverage for your flat but doesn’t reach unnecessary areas. Use a second, 
+      low-power access point with a reduced range for remote areas (e.g., your cellar) if you still need coverage there. 
 
-  - point: Hide your SSID
-    priority: Optional
-    details: >-
-      Your router's Service Set Identifier is simply the network name. If it is not visible, it may receive
-      less abuse.
-
-  - point: Disable WPS
-    priority: Optional
-    details: >-
-      Wi-Fi Protected Setup provides an easier method to connect, without entering a long WiFi password, but
-      WPS introduces a series of major security issues.
-
-  - point: Disable UPnP
-    priority: Optional
-    details: >-
-      Universal Plug and Play allows applications to automatically forward a port on your router, but it has
-      a long history of serious security issues.
-
-  - point: Use a Guest Network for Guests
-    priority: Optional
-    details: >-
-      Do not grant access to your primary WiFi network to visitors, as it enables them to interact with other
-      devices on the network.
-
-  - point: Change your Router's Default IP
-    priority: Optional
-    details: >-
-      Modifying your router admin panel's default IP address will make it more difficult for malicious scripts
-      targeting local IP addresses.
-
-  - point: Kill unused processes and services on your router
-    priority: Optional
-    details: >-
-      Services like Telnet and SSH that provide command-line access to devices should never be exposed to the
-      internet and should also be disabled on the local network unless they're actually needed.
-
-  - point: Don't have Open Ports
-    priority: Optional
-    details: >-
-      Close any open ports on your router that are not needed. Open ports provide an easy entrance for hackers.
-
-  - point: Disable Unused Remote Access Protocols
-    priority: Optional
-    details: >-
-      When protocols such as PING, Telnet, SSH, UPnP, and HNAP etc are enabled, they allow your router to be
-      probed from anywhere in the world.
-
-  - point: Disable Cloud-Based Management
-    priority: Optional
-    details: >-
-      You should treat your router's admin panel with the utmost care, as considerable damage can be caused
-      if an attacker is able to gain access.
-
-  - point: Manage Range Correctly
-    priority: Optional
-    details: >-
-      It's common to want to pump your router's range to the max, but if you reside in a smaller flat, your
-      attack surface is increased when your WiFi network can be picked up across the street.
-
-  - point: Route all traffic through [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)
+ - point: Whitelist MAC addresses
     priority: Advanced
     details: >-
-      VPNs have their weaknesses. For increased security, route all your internet traffic through the [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)
-      network.
+      You can whitelist MAC addresses in your router settings, disallowing any unknown devices to 
+      connect to your network, even if they know your Wi-Fi password or have physical access to the cable.
 
-  - point: Disable WiFi on all Devices
+  - point: Disable Wi-Fi on all devices
     priority: Advanced
     details: >-
-      Connecting to even a secure WiFi network increases your attack surface. Disabling your home WiFi and
-      connect each device via Ethernet.
-  color: violet
-  softwareLinks:
-  - title: Virtual Private Networks
-    url: https://github.com/Lissy93/awesome-privacy#virtual-private-networks
-  - title: Mix Networks
-    url: https://github.com/Lissy93/awesome-privacy#mix-networks
-  - title: Router Firmware
-    url: https://github.com/Lissy93/awesome-privacy#router-firmware
-  - title: Open Source Proxies
-    url: https://github.com/Lissy93/awesome-privacy#proxies
-  - title: DNS Providers
-    url: https://github.com/Lissy93/awesome-privacy#dns
-  - title: Firewalls
-    url: https://github.com/Lissy93/awesome-privacy#firewalls
-  - title: Network Analysis Tools
-    url: https://github.com/Lissy93/awesome-privacy#network-analysis
-  - title: Self-Hosted Network Security Tools
-    url: https://github.com/Lissy93/awesome-privacy#self-hosted-network-security
+      Connecting to even a secure Wi-Fi network increases your attack surface. Learn about [Wardriving](https://en.wikipedia.org/wiki/Wardriving).
+      Disabling your home Wi-Fi and connecting each device via Ethernet sometimes is impossible, but you
+      can disable Wi-Fi during specific times (e.g., overnight) using the router’s schedule settings.
 
 - title: Mobile Devices
   slug: mobile-devices
