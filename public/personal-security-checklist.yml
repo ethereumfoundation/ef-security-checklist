@@ -923,52 +923,50 @@
       Settings > Apps or App Management, and disable Background Data to prevent the app from using data in the background.
       At Settings > Battery > Battery Optimization page, you can restrict the app's ability to run in the background.
 
-  - point: Avoid Custom Virtual Keyboards
+  - point: Avoid custom virtual keyboards
     priority: Optional
     details: >-
       It is recommended to stick with your device's stock keyboard. If you choose to use a third-party keyboard app,
-      ensure it is reputable.
+      because it is awesome and free, think: why is it free? Google has Gboard keyboard for iOS users, Microsoft has
+      SwiftKey keyboard, and many others exist. Keep the stock keyboard; it has swipe, cursor, and many other abilities 
+      you can configure.
 
-  - point: Restart Device Regularly
+  - point: Turn off your device when unused
     priority: Optional
     details: >-
-      Restarting your phone at least once a week will clear the app state cached in memory and may run more smoothly
-      after a restart.
-
-  - point: Avoid SMS
-    priority: Optional
-    details: >-
-      SMS should not be used to receive 2FA codes or for communication, instead use an encrypted messaging app,
-      such as [Signal](https://awesome-privacy.xyz/communication/encrypted-messaging/signal).
+      When you restart or turn off your device, before it's unlocked for the first time, it's in the state which is 
+      the most hard to hack into. While a sleeping/locked device would also ask to authenticate, it's not the same.
+      Restarting your phone at least once a week will clear the app state cached in memory and even may run more 
+      smoothly after a restart.
 
   - point: Watch out for Stalkerware
     priority: Optional
     details: >-
-      Stalkerware is malware that is installed directly onto your device by someone you know.
-      The best way to get rid of it is through a factory reset.
+      [Stalkerware](https://en.wikipedia.org/wiki/Stalkerware) is malware that is installed directly onto your 
+      device by someone you know, or comes as a pre-installed application on a new Android smartphone. Review the 
+      list of installed apps on your device. Look for unfamiliar or suspicious applications, especially those with 
+      generic names like “System Service” or “Device Cleanup.” Uninstall or additionally investigate any app that 
+      you do not recognize or remember installing.
 
-  - point: Favor the Browser, over Dedicated App
-    priority: Optional
-    details: >-
-      Where possible, consider using a secure browser to access sites,
-      rather than installing dedicated applications.
-
-  - point: Consider running a custom ROM (Android)
+  - point: Consider running a custom firmware
     priority: Advanced
     details: >-
-      If you're concerned about your device manufacturer collecting too much
-      personal information, consider a privacy-focused custom ROM.
+      If you're concerned about your device manufacturer collecting your information, consider switch to a privacy-focused 
+      custom firmware. [GrapheneOS](https://grapheneos.org/) runs on Google Pixel with Android app compatibility.
+      No Pixel? Consider [LineageOS](https://lineageos.org/), or [/e/OS](https://e.foundation/e-os/), or 
+      [CalyxOS](https://calyxos.org/).
 
 - title: Personal Computers
   slug: personal-computers
   description: Securing your PC's operating system, data & activity
   icon: computer
+  color: pink  
   intro: >
-    Although Windows and OS X are easy to use and convenient, they both are far from secure.
-    Your OS provides the interface between hardware and your applications, so if
-    compromised can have detrimental effects.
+    Although Windows and macOS are easy to use and convenient, they both are far from secure.
+    Your OS provides the environment for your applications and data, so if compromised, it can have 
+    detrimental effects.
   checklist:
-  - point: Keep your System up-to-date
+  - point: Keep your system up-to-date
     priority: Essential
     details: >-
       System updates contain fixes/patches for security issues, improve performance, and sometimes add new
@@ -1173,22 +1171,6 @@
     details: >-
       Deploy canary tokens to detect unauthorized access to your files or emails faster and gather
       information about the intruder.
-  color: pink
-  softwareLinks:
-  - title: Secure Operating Systems
-    url: https://github.com/Lissy93/awesome-privacy#desktop-operating-systems
-  - title: Linux Defenses
-    url: https://github.com/Lissy93/awesome-privacy#linux-defences
-  - title: Windows Defenses
-    url: https://github.com/Lissy93/awesome-privacy#windows-defences
-  - title: Mac OS Defenses
-    url: https://github.com/Lissy93/awesome-privacy#mac-os-defences
-  - title: Anti-Malware
-    url: https://github.com/Lissy93/awesome-privacy#anti-malware
-  - title: Firewalls
-    url: https://github.com/Lissy93/awesome-privacy#firewalls-1
-  - title: File Encryption
-    url: https://github.com/Lissy93/awesome-privacy#file-encryption
 
 - title: Smart Home
   slug: smart-home
