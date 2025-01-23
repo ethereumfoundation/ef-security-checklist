@@ -436,7 +436,9 @@
     priority: Optional
     details: >-
       If you give a third-party app access to your inbox, they effectively have full unhindered
-      access to all your emails and their contents, which poses significant security and privacy risks.
+      access to all your emails and their contents, which poses significant security and privacy risks. For 
+      Google accounts it's advised to enable [Advanced Protection Program](https://landing.google.com/advancedprotection/),
+      which limits what applications can be connected and what they are allowed to do with your account.
 
   - point: Use a custom domain
     priority: Optional
@@ -801,131 +803,125 @@
   slug: mobile-devices
   description: Reduce invasive tracking for cells, smartphones and tablets
   icon: mobile
+  color: fuchsia
   intro: >
-    Smart phones have revolutionized so many aspects of life and brought the world
-    to our fingertips. For many of us, smart phones are our primary means of communication,
-    entertainment and access to knowledge. But while they've brought convenience
-    to whole new level, there's some ugly things going on behind the screen.
+    Smartphones have revolutionized many aspects of life. For many of us, smartphones are the primary 
+    means of communication, entertainment, and access to knowledge. But while they've brought convenience
+    to a whole new level, there are some ugly things going on behind the screen. Geo-tracking is used to trace 
+    our every move. And then there's the malicious apps, lack of security patches, and potential backdoors.
 
-    Geo-tracking is used to trace our every move, and we have little control over
-    who has this data- your phone is even able to
-    [track your location without GPS](https://gizmodo.com/how-to-track-a-cellphone-without-gps-or-consent-1821125371).
-    Over the years numerous reports that surfaced, outlining ways in which your
-    phone's [mic can eavesdrop](https://www.independent.co.uk/life-style/gadgets-and-tech/news/smartphone-apps-listening-privacy-alphonso-shazam-advertising-pool-3d-honey-quest-a8139451.html),
-    and the [camera can watch you](https://www.businessinsider.com/hackers-governments-smartphone-iphone-camera-wikileaks-cybersecurity-hack-privacy-webcam-2017-6)- all without your knowledge or consent.
-    And then there's the malicious apps, lack of security patches and potential/ likely backdoors.
-
-    Using a smart phone generates a lot of data about you- from information you
-    intentionally share, to data silently generated from your actions.
-    It can be scary to see what Google, Microsoft, Apple and Facebook know about
-    us- sometimes they know more than our closest family. It's hard to comprehend
-    what your data will reveal, especially in conjunction with other data.
-
-    This data is used for
-    [far more than just advertising](https://internethealthreport.org/2018/the-good-the-bad-and-the-ugly-sides-of-data-tracking/) -
-    more often it's used to rate people for finance, insurance and employment.
-    Targeted ads can even be used for fine-grained surveillance (see [ADINT](https://adint.cs.washington.edu))
-
-    More of us are concerned about how
-    [governments use collect and use our smart phone data](https://www.statista.com/statistics/373916/global-opinion-online-monitoring-government/),
-    and rightly so, federal agencies often
-    [request our data from Google](https://www.statista.com/statistics/273501/global-data-requests-from-google-by-federal-agencies-and-governments/),
-    [Facebook](https://www.statista.com/statistics/287845/global-data-requests-from-facebook-by-federal-agencies-and-governments/),
-    Apple, Microsoft, Amazon, and other tech companies. Sometimes requests are
-    made in bulk, returning detailed information on everybody within a certain geo-fence,
-    [often for innocent people](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html).
-    And this doesn't include all of the internet traffic that intelligence agencies around the world have unhindered access to.
   checklist:
-  - point: Encrypt your Device
+  - point: Encrypt your device
     priority: Essential
     details: >-
-      In order to keep your data safe from physical access, use file encryption. This will mean if your
-      device is lost or stolen, no one will have access to your data.
+      In order to keep your data safe from physical access, set up a strong passphrase for your smartphone.
+      All data is encrypted when the phone is locked, and decryption is tied to the user’s password or 
+      biometrics. This will mean if your device is lost or stolen, no one will have access to your data.
+      [Take a look](https://x.com/GrapheneOS/status/1791833221165965567) at which OS versions can be easily
+      hacked if someone has physical access to your device.
+
+  - point: Keep smartphone updated
+    priority: Essential
+    details: >-
+      Apple typically provides iOS updates for 6 to 8 years. Google Pixel Series has 3 to 7 years, depending 
+      on the model. Samsung, OnePlus, Xiaomi, OPPO can offer 2 to 5 years of updates for certain flagship models. 
+      The countdown starts from a device’s release date.
+
+  - point: Keep your primary number private
+    priority: Essential
+    details: >-
+      Your phone number should not be used for authentication purposes, yet every second website wants it.
+      Make sure the number that your bank and payment provider knows is not the same one you use daily. 
+      Setting up a prepaid e-SIM is the most reliable option. There are services that allow you to create 
+      and use virtual phone numbers, but each has its own reliability concerns and caveats.
 
   - point: Turn off connectivity features that aren’t being used
     priority: Essential
     details: >-
-      When you're not using WiFi, Bluetooth, NFC etc, turn those features off. There are several common threats
-      that utilise these features.
+      When you're not using Wi-Fi, Bluetooth, NFC or any other wireless features, turn them off. There are 
+      several threats that utilise these features. On an iPhone, Wi-Fi and Bluetooth can be turned off in two ways: 
+      temporarily via Control Center or permanently via Settings. Use the Shortcuts app to create automation 
+      routines that disable Wi-Fi and Bluetooth under specific conditions.
 
   - point: Keep app count to a minimum
     priority: Essential
     details: >-
-      Uninstall apps that you don’t need or use regularly. As apps often run in the background, slowing your
-      device down, but also collecting data.
+      Uninstall apps that you don’t need or use regularly. Apps often run in the background, slowing your
+      device down and collecting data. When an application is allowed to show notifications, it also 
+      automatically enables silent remote activation of the app to process any requests from the app backend.
+      While this is technically required for notifications to work, there are cases where it is also used
+      for user tracking.
 
-  - point: App Permissions
+  - point: Only install applications from official sources
     priority: Essential
     details: >-
-      Don’t grant apps permissions that they don’t need. For Android, [Bouncer](https://awesome-privacy.xyz/security-tools/mobile-apps/bouncer) is an app that allows you to grant
-      temporary/ 1-off permissions.
+      Applications on the Apple App Store and Google Play Store undergo at least minimal checks before publication, 
+      making them less likely to contain 100% malicious code. Anything you download and install from sources 
+      claiming "free" games or software will be uncharted territory.
 
-  - point: Only install Apps from official source
+  - point: Always limit application permissions
     priority: Essential
     details: >-
-      Applications on Apple App Store and Google Play Store are scanned and cryptographically signed, making them
-      less likely to be malicious.
+      Don’t grant apps permissions that they don’t need. Both iOS and Android have wide permission controls,
+      running applications in a sandbox and allowing access to only certain sensors. Increase your awareness if
+      an application requests access to any of these: Location, Notifications, Accessibility Services, Microphone, 
+      Camera, Contacts, SMS and Phone, Storage/Files, Calendar, Bluetooth, Local Network.
 
-  - point: Be Careful of Phone Charging Threats
-    priority: Optional
-    details: >-
-      Juice Jacking is when hackers use public charging stations to install malware on your smartphone or tablet
-      through a compromised USB port.
-
-  - point: Set up a mobile carrier PIN
+  - point: Be careful with USB charging cables
     priority: Essential
     details: >-
-      SIM hijacking is when a hacker is able to get your mobile number transferred to their sim. The easiest way
-      to protect against this is to set up a PIN through your mobile provider.
+      Hackers can physically "upgrade" public charging stations to install malware on your smartphone or tablet
+      through a compromised USB port. Always deny if your device asks you if you allow to connect, but you only
+      wanted to charge. [BadUSB](https://en.wikipedia.org/wiki/BadUSB) is a family of attacks, where attached
+      device can simulate keyboard and external storage. Now these microchips are so small, that they could be
+      included [in a cable](https://nypost.com/2024/12/13/tech/the-scary-reason-why-you-should-never-share-phone-chargers/). 
 
-  - point: Opt-out of Caller ID Listings
+  - point: Secure your SIM card
+    priority: Essential
+    details: >-
+      SIM hijacking occurs when an attacker fraudulently transfers your phone number to their SIM card, gaining 
+      access to your calls and incoming SMS. Contact your mobile operator, ask for a "No Port Freeze" or  
+      setting "Port-Out Authorization PIN/password". If possible, request that SIM swaps can only be done in 
+      person at a carrier store with proper ID. This mostly prevents unauthorized changes to your account. Ensure 
+      the password is strong and not easily guessable (3-5 words sentence is best). Go to your phone’s settings 
+      and enable SIM card PIN lock. This requires a PIN each time your phone restarts or the SIM is moved to a 
+      new device.
+
+  - point: Opt-out of caller ID listings
     priority: Optional
     details: >-
       To keep your details private, you can unlist your number from caller ID apps like TrueCaller, CallApp, SyncMe,
-      and Hiya.
-
-  - point: Use Offline Maps
-    priority: Optional
-    details: >-
-      Consider using an offline maps app, such as OsmAnd or Organic Maps, to reduce data leaks from map apps.
+      and Hiya. This requires a request to each of these providers.
 
   - point: Opt-out of personalized ads
     priority: Optional
     details: >-
-      You can slightly reduce the amount of data collected by opting-out of seeing personalized ads.
+      You can slightly reduce the amount of data collected by opting out of seeing personalized ads. On iOS, go to
+      Settings > Privacy & Security > Tracking > Allow Apps to Request to Track. Then Settings > Privacy & Security > 
+      Apple Advertising > Personalized Ads. On Android, go to Settings > Privacy > Ads > Opt out of Ads Personalization.
+      Review all other available options and reports in Privacy Settings on your smartphone to understand them.
 
-  - point: Erase after too many login attempts
+  - point: Erase after too many unlock attempts
     priority: Optional
     details: >-
-      To protect against an attacker brute forcing your pin, set your device to erase after too many failed
-      login attempts.
+      To protect against an attacker brute forcing your PIN, set your device to erase all the data after 
+      too many failed login attempts (it's 10 for iOS and 15 for Android). This works bad if you have a small kid.
 
-  - point: Monitor Trackers
+  - point: Check installed apps for trackers
     priority: Optional
     details: >-
-      [εxodus](https://awesome-privacy.xyz/security-tools/online-tools/εxodus) is a great service which
-      lets you search for any app and see which trackers are embedded in it.
+      [εxodus](https://reports.exodus-privacy.eu.org/en/) is a web service that lets you search for any app and 
+      see which trackers are embedded in it and what permissions (Android only) it requires. It's kind of a rabbit
+      hole, since most applications request too much, and if you ask support why, it's very hard to get
+      any meaningful answers.
 
-  - point: Use a Mobile Firewall
+  - point: Reduce background activity
     priority: Optional
     details: >-
-      To prevent applications from leaking privacy-sensitive data, you can install a firewall app.
-
-  - point: Reduce Background Activity
-    priority: Optional
-    details: >-
-      For Android, SuperFreeze makes it possible to entirely freeze all background activities on a per-app basis.
-
-  - point: Sandbox Mobile Apps
-    priority: Optional
-    details: >-
-      Prevent permission-hungry apps from accessing your private data with [Island](https://awesome-privacy.xyz/security-tools/mobile-apps/island), a sandbox environment.
-
-  - point: Tor Traffic
-    priority: Advanced
-    details: >-
-      [Orbot](https://awesome-privacy.xyz/security-tools/mobile-apps/orbot) provides
-      a system-wide Tor connection, which will help protect you from surveillance and public WiFi threats.
+      For iOS, go to Settings > General > Background App Refresh and toggle off Background App Refresh globally or 
+      for all but chosen apps. Do the same at Settings > Privacy & Security > Location Services. For Android, go to
+      Settings > Apps or App Management, and disable Background Data to prevent the app from using data in the background.
+      At Settings > Battery > Battery Optimization page, you can restrict the app's ability to run in the background.
 
   - point: Avoid Custom Virtual Keyboards
     priority: Optional
@@ -945,13 +941,6 @@
       SMS should not be used to receive 2FA codes or for communication, instead use an encrypted messaging app,
       such as [Signal](https://awesome-privacy.xyz/communication/encrypted-messaging/signal).
 
-  - point: Keep your Number Private
-    priority: Optional
-    details: >-
-      [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) allows
-      you to create and use virtual phone numbers for different people or groups. This is great for
-      compartmentalisation.
-
   - point: Watch out for Stalkerware
     priority: Optional
     details: >-
@@ -969,14 +958,6 @@
     details: >-
       If you're concerned about your device manufacturer collecting too much
       personal information, consider a privacy-focused custom ROM.
-  color: fuchsia
-  softwareLinks:
-  - title: Mobile Apps, for Security + Privacy
-    url: https://github.com/Lissy93/awesome-privacy#mobile-apps
-  - title: Encrypted Messaging
-    url: https://github.com/Lissy93/awesome-privacy#encrypted-messaging
-  - title: Mobile Operation Systems
-    url: https://github.com/Lissy93/awesome-privacy#mobile-operating-systems
 
 - title: Personal Computers
   slug: personal-computers
