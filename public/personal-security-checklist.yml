@@ -1111,13 +1111,8 @@
   slug: smart-home
   description: Using IoT devices without compromising your privacy
   icon: home
+  color: red
   intro: >-
-    Home assistants (such as Google Home, Alexa and Siri) and other internet connected
-    devices collect large amounts of personal data (including voice samples, location data,
-    home details and logs of all interactions). Since you have limited control on what is
-    being collected, how it's stored, and what it will be used for, this makes it hard to
-    recommend any consumer smart-home products to anyone who cares about privacy and security.
-
     Security vs Privacy: There are many smart devices on the market that claim to increase
     the security of your home while being easy and convenient to use (Such as Smart Burglar
     Alarms, Internet Security Cameras, Smart Locks and Remote access Doorbells to name a few).
@@ -1134,6 +1129,15 @@
     The following checklist will help mitigate the risks associated with
     internet-connected home devices.
   checklist:
+  - point: Understand Alexa/Google Home/Siri risks
+    priority: Essential
+    details: >-
+      Voice assistants (such as Google Home, Alexa and Siri) and other Internet-connected
+      devices collect large amounts of personal data (including voice samples, location data,
+      home details and logs of all interactions). Since you have limited control on what is
+      being collected, how it's stored, and what it will be used for, this makes it hard to
+      recommend any consumer smart-home products to anyone who cares about privacy and security.
+
   - point: Rename devices to not specify brand/model
     priority: Essential
     details: >-
@@ -1178,13 +1182,7 @@
     priority: Optional
     details: >-
       Evaluate the risks of internet-connected thermostats, alarms, and detectors due to potential remote access by hackers.
-
-  - point: Mitigate Alexa/ Google Home Risks
-    priority: Optional
-    details: >-
-      Consider privacy-focused alternatives like
-      [Mycroft](https://awesome-privacy.xyz/smart-home-and-iot/voice-assistants/mycroft) or use
-      Project Alias to prevent idle listening by voice-activated assistants.
+      If you are building your smart home, select devices that communicate using ZigBee or Matter on Thread.
 
   - point: Monitor your home network closely
     priority: Optional
@@ -1200,12 +1198,6 @@
     priority: Advanced
     details: >-
       Consider the privacy implications for all household members and adjust device settings for security and privacy, such as disabling devices at certain times.
-  color: red
-  softwareLinks:
-  - title: Home Automation
-    url: https://github.com/Lissy93/awesome-privacy#home-automation
-  - title: AI Voice Assistants
-    url: https://github.com/Lissy93/awesome-privacy#ai-voice-assistants
 
 - title: Personal Finance
   slug: personal-finance
