@@ -1113,91 +1113,75 @@
   icon: home
   color: red
   intro: >-
-    Security vs Privacy: There are many smart devices on the market that claim to increase
-    the security of your home while being easy and convenient to use (Such as Smart Burglar
-    Alarms, Internet Security Cameras, Smart Locks and Remote access Doorbells to name a few).
-    These devices may appear to make security easier, but there is a trade-off in terms of
-    privacy: as they collect large amounts of personal data, and leave you without control
-    over how this is stored or used. The security of these devices is also questionable,
-    since many of them can be (and are being) hacked, allowing an intruder to bypass
-    detection with minimum effort.
-
-    The most privacy-respecting option, would be to not use "smart" internet-connected
-    devices in your home, and not to rely on a security device that requires an internet
-    connection. But if you do, it is important to fully understand the risks of any given
-    product, before buying it. Then adjust settings to increase privacy and security.
-    The following checklist will help mitigate the risks associated with
-    internet-connected home devices.
+    The most privacy-respecting option is to not use "smart" Internet-connected devices in your home. However, 
+    since we do use them, it is important to fully understand the risks associated with any given product 
+    before buying it. The following checklist will help mitigate the risks associated with "smart" devices.
   checklist:
   - point: Understand Alexa/Google Home/Siri risks
     priority: Essential
     details: >-
-      Voice assistants (such as Google Home, Alexa and Siri) and other Internet-connected
+      Voice assistants (such as Google Home, Alexa, and Siri) and other Internet-connected
       devices collect large amounts of personal data (including voice samples, location data,
-      home details and logs of all interactions). Since you have limited control on what is
+      home details, and logs of all interactions). Since you have limited control over what is
       being collected, how it's stored, and what it will be used for, this makes it hard to
       recommend any consumer smart-home products to anyone who cares about privacy and security.
 
-  - point: Rename devices to not specify brand/model
+  - point: Rename devices and update passwords
     priority: Essential
     details: >-
-      Change default device names to something generic to prevent targeted attacks by obscuring brand or model information.
+      During or after the first setup, change default device names. Do not include any personal 
+      identifiers, and do not specify brand/model to prevent targeted attacks. Update PIN codes and
+      passwords from the defaults. Save all updated information to your password manager.
 
-  - point: Disable microphone and camera when not in use
+  - point: Build a self-hosted smart home
     priority: Essential
     details: >-
-      Use hardware switches to turn off microphones and cameras on smart devices to protect against accidental recordings or targeted access.
+      [Home Assistant](https://www.home-assistant.io/) is a recommended open-source solution for building a smart home,
+      supporting thousands of integrations by hundreds of active contributors. Using it as the core of your setup
+      will guarantee longevity and privacy.
 
   - point: Understand what data is collected, stored and transmitted
     priority: Essential
     details: >-
-      Research and ensure comfort with the data handling practices of smart home devices before purchase, avoiding devices that share data with third parties.
+      Research and ensure comfort with the data handling practices of smart home devices before purchase, avoiding 
+      devices that share data with third parties, or don't have hardware switches to turn off microphones and cameras
+      at will.
 
-  - point: Set privacy settings, and opt out of sharing data with third parties
+  - point: Adjust privacy settings and opt out of sharing data with third parties
     priority: Essential
     details: >-
       Adjust app settings for strictest privacy controls and opt-out of data sharing with third parties wherever possible.
-
-  - point: Don't link your smart home devices to your real identity
-    priority: Essential
-    details: >-
-      Use anonymous usernames and passwords, avoiding sign-up/log-in via social media or other third-party services to maintain privacy.
+      Pay attention to default checkboxes on sign-up. Consider using a fake name and a forwarder email address; 
+      your vacuum cleaner doesn't need to know real ones. Avoiding sign-up/log-in via social media or other third-party 
+      services to maintain privacy.
 
   - point: Keep firmware up-to-date
     priority: Essential
     details: >-
-      Regularly update smart device firmware to apply security patches and enhancements.
+      Regularly check for updates to smart device firmware to apply security patches and enhancements. Lack of updates
+      for years means no one cares about it anymore. If there is no alternative open-source firmware, you should prepare
+      to follow the "planned aging" decided by the manufacturer – and avoid purchasing any new hardware from them.
 
-  - point: Protect your Network
+  - point: Don't connect everything in your home to the Internet
     priority: Essential
     details: >-
-      Secure your home WiFi and network to prevent unauthorized access to smart devices.
+      Evaluate the risks of internet-connected thermostats, alarms, and detectors due to potential remote access by hackers.
+      If you are building your smart home, select devices that communicate using Zigbee, [Thread](https://www.threadgroup.org/),
+      or BLE (Bluetooth Low Energy) with a local gateway you control. Controlling your smart LED light through a server in 
+      China is wrong, slow, and insecure (yes, Xiaomi, we are looking at you!).
 
-  - point: Be wary of wearables
+  - point: Be wary of wearable devices
     priority: Optional
     details: >-
       Consider the extensive data collection capabilities of wearable devices and their implications for privacy.
-
-  - point: Don't connect your home's critical infrastructure to the Internet
-    priority: Optional
-    details: >-
-      Evaluate the risks of internet-connected thermostats, alarms, and detectors due to potential remote access by hackers.
-      If you are building your smart home, select devices that communicate using ZigBee or Matter on Thread.
-
+      Often these devices offer to share your every activity with "friends," which sometimes means anyone interested 
+      in tracking where and what you do.
+  
   - point: Monitor your home network closely
     priority: Optional
     details: >-
-      Use tools like FingBox or router features to monitor for unusual network activity.
-
-  - point: Deny Internet access where possible
-    priority: Advanced
-    details: >-
-      Use firewalls to block internet access for devices that don't need it, limiting operation to local network use.
-
-  - point: Assess risks
-    priority: Advanced
-    details: >-
-      Consider the privacy implications for all household members and adjust device settings for security and privacy, such as disabling devices at certain times.
+      Use tools like [Zenmap](https://nmap.org/zenmap/), [Fing](https://www.fing.com/) or router features to monitor for unusual 
+      network activity.
 
 - title: Personal Finance
   slug: personal-finance
