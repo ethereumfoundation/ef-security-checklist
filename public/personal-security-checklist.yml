@@ -1265,7 +1265,7 @@
       or Crypto ATMs. Use [separate wallets](https://ethereum.org/en/wallets/find-wallet/) for different purposes:
       until you send transactions between them it's extremely hard to link different wallets to one identity.
 
-  - point: Learn about coin tubmlers/mixers
+  - point: Learn about coin tumblers/mixers
     priority: Advanced
     details: >-
       Coin tumblers are services designed to enhance the privacy of cryptocurrency transactions. They work by pooling 
@@ -1288,121 +1288,90 @@
 
 - title: Human Aspect
   slug: human-aspect
-  description: Avoiding social engineering security risks
+  description: Learning about social engineering risks
   icon: human
+  color: indigo
   intro: >-
-    Many data breaches, hacks and attacks are caused by human error.
-    The following list contains steps you should take, to reduce the risk of this
-    happening to you. Many of them are common sense, but it's worth takin note of.
+      Many data breaches, hacks and attacks are caused by human error. Hackers learn human psychology, and you should 
+      too. The following list contains steps you should take to reduce the risk of this happening to you.
 
   checklist:
-  - point: Verify Recipients
+  - point: Verify counterparties
     priority: Essential
     details: >-
-      Emails can be easily spoofed. Verify the sender's authenticity, especially for sensitive actions, and prefer entering URLs manually rather than clicking links in emails.
-
-  - point: Don't Trust Your Popup Notifications
-    priority: Essential
-    details: >-
-      Fake pop-ups can be deployed by malicious actors. Always check the URL before entering any information on a popup.
-
-  - point: Never Leave Device Unattended
-    priority: Essential
-    details: >-
-      Unattended devices can be compromised even with strong passwords. Use encryption and remote erase features like Find My Phone for lost devices.
-
-  - point: Prevent Camfecting
-    priority: Essential
-    details: >-
-      Protect against camfecting by using webcam covers and microphone blockers. Mute home assistants when not in use or discussing sensitive matters.
-
-  - point: Stay protected from shoulder surfers
-    priority: Essential
-    details: >-
-      Use privacy screens on laptops and mobiles to prevent others from reading your screen in public spaces.
-
-  - point: Educate yourself about phishing attacks
-    priority: Essential
-    details: >-
-      Be cautious of phishing attempts. Verify URLs, context of received messages, and employ good security practices like using 2FA and not reusing passwords.
-
-  - point: Watch out for Stalkerware
-    priority: Essential
-    details: >-
-      Be aware of stalkerware installed by acquaintances for spying. Look out for signs like unusual battery usage and perform factory resets if suspected.
-
-  - point: Install Reputable Software from Trusted Sources
-    priority: Essential
-    details: >-
-      Only download software from legitimate sources and check files with tools
-      like [Virus Total](https://awesome-privacy.xyz/security-tools/online-tools/virus-total) before installation.
-
-  - point: Store personal data securely
-    priority: Essential
-    details: >-
-      Ensure all personal data on devices or in the cloud is encrypted to protect against unauthorized access.
-
-  - point: Obscure Personal Details from Documents
-    priority: Essential
-    details: >-
-      When sharing documents, obscure personal details with opaque rectangles to prevent information leakage.
+      Always verify the identity of individuals requesting sensitive information—whether by phone, email, or in person. 
+      Call back and use separate communication channels to validate requests. Emails can be easily spoofed. Verify the 
+      sender's authenticity, especially for sensitive actions, and prefer entering URLs manually rather than clicking 
+      links in emails.
 
   - point: Do not assume a site is secure, just because it is `HTTPS`
     priority: Essential
     details: >-
       HTTPS does not guarantee a website's legitimacy. Verify URLs and exercise caution with personal data.
 
-  - point: Use Virtual Cards when paying online
-    priority: Optional
+  - point: Aim for social media privacy
+    priority: Essential
     details: >-
-      Use virtual cards for online payments to protect your banking details and limit transaction risks.
+      Limit the amount of personal and professional information available publicly on social platforms. This helps reduce 
+      the risk of attackers gathering details to craft convincing scams. Check and update your social media 
+      settings, as unsafe defaults may affect your privacy.
 
-  - point: Review application permissions
-    priority: Optional
+  - point: Don't trust virtual interactions
+    priority: Essential
     details: >-
-      Regularly review and manage app permissions to ensure no unnecessary access to sensitive device features.
+      Common techniques such as phishing (emails that impersonate trusted entities), vishing (voice scams), smishing 
+      (SMS scams), baiting, pretexting, and tailgating are used by malicious actors. Read articles, watch online courses, 
+      and review real-life case studies to learn how they look like. Treat unsolicited calls, emails, or messages 
+      offering free tech support, giveaways, or “too good to be true” deals with extreme caution.
 
-  - point: Opt-out of public lists
-    priority: Optional
+  - point: Learn cognitive biases and psychological triggers
+    priority: Essential
     details: >-
-      Remove yourself from public databases and marketing lists to reduce unwanted contacts and potential risks.
+      Familiarize yourself with biases like [authority bias](https://en.wikipedia.org/wiki/Authority_bias) (trusting 
+      figures of authority), [social proof](https://en.wikipedia.org/wiki/Social_proof) (following the crowd), 
+      [scarcity](https://en.wikipedia.org/wiki/Scarcity_(social_psychology)#Effects_of_scarcity_in_humans) (the lure of 
+      limited opportunities), [reciprocity](https://en.wikipedia.org/wiki/Reciprocity_(social_psychology)) (feeling 
+      obliged to return a favor), and others.
 
-  - point: Never Provide Additional PII When Opting-Out
-    priority: Optional
+  - point: Practice critical thinking
+    priority: Essential
     details: >-
-      Do not provide additional personal information when opting out of data services to avoid further data collection.
+      Develop a habit of “double-checking” any request for personal or financial information. Ask yourself, “Does this 
+      trigger an emotional response?” If yes, take extra time to analyze it. Excitement around winning or loosing,
+      threat or danger to you and family is often exploited by criminals.
 
-  - point: Opt-out of data sharing
+  - point: Opt-out of public databases
     priority: Optional
     details: >-
-      Many apps and services default to data sharing settings. Opt out to protect your data from being shared with third parties.
+      On every occasion remove yourself from public databases and marketing lists to reduce unwanted contacts and 
+      potential risks. Do not provide additional personal information when opting out of data services to avoid 
+      further data collection. [Example opt-out](https://www.clearview.ai/privacy-and-requests) page for a service
+      which downloaded 50 billions of photos to provide commercial face recognition services.
 
-  - point: Review and update social media privacy
+  - point: Blur your profile
     priority: Optional
     details: >-
-      Regularly check and update your social media settings due to frequent terms updates that may affect your privacy settings.
+      Use different combinations of fake names, addresses, and emails for all non-important, non-government interactions.
+      Let the bookshop think you are another person. The delivery service can call you by a fake name without knowing it.
+      Your nonexistent sibling purchases all these board games from a local store. When this data leaks 
+      ([Have I Been Pwned?](https://haveibeenpwned.com) is listing thousand of the biggest leaks to check), it would be 
+      a nightmare for anyone trying to compile your profile.
 
   - point: Compartmentalize
     priority: Advanced
     details: >-
-      Keep different areas of digital activity separate to limit data exposure in case of a breach.
+      Keep different areas of digital activity separate to limit data exposure in case of a breach. Your work laptop
+      and accounts shouldn't contain your personal data. Your child should never be allowed to use your devices.
+      Encrypt everything you archive. If you have fewer than 5 separate encrypted containers now, you are probably 
+      approaching it wrongly. Don't save top-secret stuff on an encrypted volume you mount daily. Trade cryptocurrencies 
+      and run your wallets in a separate browser that is not used for other activities.
 
-  - point: WhoIs Privacy Guard
+  - point: Develop a family security protocol
     priority: Advanced
     details: >-
-      Use WhoIs Privacy Guard for domain registrations to protect your personal information from public searches.
-
-  - point: Use a forwarding address
-    priority: Advanced
-    details: >-
-      Use a PO Box or forwarding address for mail to prevent companies from knowing your real address, adding a layer of privacy protection.
-
-  - point: Use anonymous payment methods
-    priority: Advanced
-    details: >-
-      Opt for anonymous payment methods like cryptocurrencies to avoid entering identifiable information online.
-
-  color: indigo
+      Create a checklist for handling sensitive communications. For instance, decide that you will never share passwords 
+      or financial information over unsolicited phone calls, chats or emails without independent verification. Write down 
+      your own “rules” and refer to them when you’re unsure. Use encrypted messaging apps within your family circle.
 
 - title: Physical Security
   slug: physical-security
