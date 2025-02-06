@@ -858,8 +858,8 @@
       Uninstall apps that you don’t need or use regularly. Apps often run in the background, slowing your
       device down and collecting data. When an application is allowed to show notifications, it also 
       automatically enables silent remote activation of the app to process any requests from the app backend.
-      While this is technically required for notifications to work, there are cases where it is also used
-      for user tracking.
+      While this is technically required for notifications to work, there are cases where it is also 
+      [used for user tracking](https://timsh.org/tracking-myself-down-through-in-app-ads/).
 
   - point: Only install applications from official sources
     priority: Essential
@@ -1187,91 +1187,104 @@
   slug: personal-finance
   description: Protecting your funds, financial accounts and transactions
   icon: finance
-  intro: >-
-    Credit card fraud is the most common form of identity theft (with [133,015 reports in the
-    US in 2017 alone](https://www.experian.com/blogs/ask-experian/identity-theft-statistics/)),
-    and a total loss of $905 million, which was a 26% increase from the previous year.
-    The with a median amount lost per person was $429 in 2017.
-    It's more important than ever to take basic steps to protect yourself from falling victim
-
-    Note about credit cards: Credit cards have technological methods in place to
-    detect and stop some fraudulent transactions. Major payment processors implement
-    this, by mining huge amounts of data from their card holders, in order to know
-    a great deal about each persons spending habits. This data is used to identify
-    fraud, but is also sold onto other data brokers. Credit cards are therefore good
-    for security, but terrible for data privacy.
-  checklist:
-  - point: Sign up for Fraud Alerts and Credit Monitoring
-    priority: Essential
-    details: >-
-      Enable fraud alerts and credit monitoring through Experian, TransUnion, or Equifax to be alerted of suspicious activity.
-
-  - point: Apply a Credit Freeze
-    priority: Essential
-    details: >-
-      Prevent unauthorized credit inquiries by freezing your credit through Experian, TransUnion, and Equifax.
-
-  - point: Use Virtual Cards
-    priority: Optional
-    details: >-
-      Utilize virtual card numbers for online transactions to protect your real banking details. Services like [Privacy.com](https://awesome-privacy.xyz/finance/virtual-credit-cards/privacy.com) and [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) offer such features.
-
-  - point: Use Cash for Local Transactions
-    priority: Optional
-    details: >-
-      Pay with [Cash](https://awesome-privacy.xyz/finance/other-payment-methods/cash) for local and everyday purchases to avoid financial profiling by institutions.
-
-  - point: Use Cryptocurrency for Online Transactions
-    priority: Optional
-    details: >-
-      Opt for privacy-focused cryptocurrencies like
-      [Monero](https://awesome-privacy.xyz/finance/cryptocurrencies/monero) for
-      online transactions to maintain anonymity. Use cryptocurrencies wisely to ensure privacy.
-
-  - point: Store Crypto Securely
-    priority: Advanced
-    details: >-
-      Securely store cryptocurrencies using offline wallet generation, hardware wallets
-      like [Trezor](https://awesome-privacy.xyz/finance/crypto-wallets/trezor) or
-      [ColdCard](https://awesome-privacy.xyz/finance/crypto-wallets/coldcard), or
-      consider long-term storage solutions like
-      [CryptoSteel](https://awesome-privacy.xyz/finance/crypto-wallets/cryptosteel).
-
-  - point: Buy Crypto Anonymously
-    priority: Advanced
-    details: >-
-      Purchase cryptocurrencies without linking to your identity through services
-      like [LocalBitcoins](https://awesome-privacy.xyz/finance/crypto-exchanges/localbitcoins),
-      [Bisq](https://awesome-privacy.xyz/finance/crypto-exchanges/bisq), or Bitcoin ATMs.
-
-  - point: Tumble/ Mix Coins
-    priority: Advanced
-    details: >-
-      Use a bitcoin mixer or CoinJoin before converting Bitcoin to currency to obscure transaction trails.
-
-  - point: Use an Alias Details for Online Shopping
-    priority: Advanced
-    details: >-
-      For online purchases, consider using alias details, forwarding email addresses, VOIP numbers, and secure delivery methods to protect your identity.
-
-  - point: Use alternate delivery address
-    priority: Advanced
-    details: >-
-      Opt for deliveries to non-personal addresses such as PO Boxes, forwarding addresses, or local pickup locations to avoid linking purchases directly to you.
   color: purple
-  softwareLinks:
-  - title: Virtual Credit Cards
-    url: https://github.com/Lissy93/awesome-privacy#virtual-credit-cards
-  - title: Cryptocurrencies
-    url: https://github.com/Lissy93/awesome-privacy#cryptocurrencies
-  - title: Crypto Wallets
-    url: https://github.com/Lissy93/awesome-privacy#crypto-wallets
-  - title: Crypto Exchanges
-    url: https://github.com/Lissy93/awesome-privacy#crypto-exchanges
-  - title: Other Payment Methods
-    url: https://github.com/Lissy93/awesome-privacy#other-payment-methods
-  - title: Budgeting Tools
-    url: https://github.com/Lissy93/awesome-privacy#budgeting-tools
+  intro: >-
+    Money is the primary target for criminals, more valuable than your data. When using any forms of 
+    digital assets, it's more important than ever to take precautionary steps to protect yourself from 
+    falling victim.
+
+  checklist:
+  - point: Sign up for fraud alerts and credit monitoring
+    priority: Essential
+    details: >-
+      Enable fraud alerts and credit monitoring through Experian, TransUnion, Equifax, or your local credit score provider 
+      to be alerted of suspicious activity: you should get an alert each time somebody requests your credit history,
+      which lists your accounts at different banks and their financial state over time.
+
+  - point: Request a credit freeze
+    priority: Essential
+    details: >-
+      Prevent unauthorized credit inquiries by freezing your credit through Experian, TransUnion, Equifax, or your local 
+      credit score provider.
+
+  - point: Segment your assets
+    priority: Essential
+    details: >-
+      Don’t keep all your funds in one wallet, account, or bank. Use multiple wallets or accounts to diversify risk; 
+      if one is compromised, you won’t lose everything. There are many ways and tools to keep your personal finances 
+      in order, and they will help you keep track of your accounts.
+
+  - point: Use virtual cards
+    priority: Essential
+    details: >-
+      Utilize virtual card numbers for online transactions to protect your real banking details. Services like 
+      [Privacy.com](https://privacy.com) (US-only) offer such features. Check tariffs of your local banks: it may be
+      possible to issue new cards just on your smartphone. Consider using a credit card with zero credit limit if
+      you are renting a car or other vehicle.
+
+  - point: Use a secret phone number for your primary bank
+    priority: Essential
+    details: >-
+      Phone numbers should not be used for authentication, yet they are still a common method banks use. 
+      Make sure you don't register your public phone number with the bank where you keep most of your assets. 
+      Utilize all advice from [Authentication](/checklist/authentication/) and [Mobile Devices](/checklist/mobile-devices/) 
+      sections for your payment accounts.
+
+  - point: Use cryptocurrencies wisely
+    priority: Essential
+    details: >-
+      Opt for cryptocurrencies for international transactions to keep fees low and store share of your assets for 
+      diversification. However, use cryptocurrencies wisely: everything is recorded on a public blockchain and analyzed, 
+      so your activity can reveal your identity. Cryptocurrencies are not completely anonymous.
+
+  - point: Store cryptocurrencies securely
+    priority: Essential
+    details: >-
+      Only store cryptocurrencies in non-custodial wallets. For accounts holding more than $1000, use offline wallet 
+      generation and hardware wallets like [Trezor](https://trezor.io/). Learn what a multi-sig wallet is; when your 
+      friends or colleagues use crypto, wallets like [Safe](https://safe.global/wallet) or [Argent](https://www.argent.xyz/) 
+      provide you with an ultimate level of security for crypto assets and reliable recovery methods.
+
+  - point: Backup seed words and private keys
+    priority: Essential
+    details: >-
+      Backup your wallet recovery phrases, private keys, and important account details on physical media. Write down,
+      use key separation techniques like [Shamir's secret sharing](https://en.m.wikipedia.org/wiki/Shamir%27s_secret_sharing)
+      to break a secret into multiple shards. Lord Voldemort did it (kind of), you should do it too.
+    
+  - point: Use cash for local transactions
+    priority: Optional
+    details: >-
+      Pay with cash for local and everyday purchases to avoid financial profiling. Remember that all affiliate and
+      cashback programs are tracking you to sell your data.
+
+  - point: Buy cryptocurrencies anonymously
+    priority: Optional
+    details: >-
+      Purchase cryptocurrencies without linking to your identity through services like [Bisq](https://bisq.network/), 
+      or Crypto ATMs. Use [separate wallets](https://ethereum.org/en/wallets/find-wallet/) for different purposes:
+      until you send transactions between them it's extremely hard to link different wallets to one identity.
+
+  - point: Learn about coin tubmlers/mixers
+    priority: Advanced
+    details: >-
+      Coin tumblers are services designed to enhance the privacy of cryptocurrency transactions. They work by pooling 
+      together funds from multiple users and then redistributing them, thereby breaking the direct link between the 
+      source and destination of the coins that can be traced through blockchain. While these mixers are valuable for 
+      protecting user privacy, they have also attracted attention from regulators and law enforcement due to their 
+      potential misuse in money laundering and other illicit activities. You should be aware of both the privacy 
+      benefits and the legal implications of using such services.
+      Bitcoin mixers use techniques such as CoinJoin, where multiple transactions are combined into one, making it 
+      harder to trace individual coin histories. On Ethereum, decentralized mixing services like Tornado Cash use 
+      smart contracts to mix ETH and ERC-20 tokens, effectively obfuscating transaction trails. 
+      Be cautious, since such services could be illegal in your location, and their usage faces regulatory scrutiny.
+
+  - point: Use an alias for online shopping
+    priority: Advanced
+    details: >-
+      For online purchases, consider using a fake identity with a forwarding email address, virtual phone number, 
+      and secure delivery methods (such as PO Boxes, forwarding addresses, or local pickup locations) to protect your 
+      identity and avoid linking purchases directly to you.
 
 - title: Human Aspect
   slug: human-aspect
