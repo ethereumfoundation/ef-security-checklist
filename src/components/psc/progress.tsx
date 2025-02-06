@@ -326,9 +326,10 @@ export default component$(() => {
       {/* Help and support */}
       <div class="p-4 rounded-box bg-front shadow-md w-96 flex-grow">
         <p class="text-md opacity-80 mb-2">
+          Progress data is stored locally in your browser, and is not shared with anyone.
           Have questions or need help? Reach out to us using the
           &nbsp;<a class="link link-secondary font-bold" href="mailto:opsec@ethereum.org">email group</a>&nbsp;
-          with any concers or feedback.
+          with any concerns or feedback.
         </p>
       </div>
     </div>
