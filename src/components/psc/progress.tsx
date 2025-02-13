@@ -291,9 +291,10 @@ export default component$(() => {
           class="absolute top-1 right-1 btn btn-sm opacity-50"
           onClick$={() => setIgnoreDialog(true)}
           >Close</button>
-        <p class="text-xl block text-center font-bold">No stats yet</p>
-        <p class="w-md text-left my-2">You'll see your progress here, once you start ticking items off the checklists</p>
-        <p class="w-md text-left my-2">Get started, by selecting a checklist below</p>
+        <p class="text-xl block text-center font-bold">Welcome!</p>
+        <p class="w-md text-left my-2">You'll see your progress here once you start your journey through the checklists.</p>
+        <p class="w-md text-left my-2">You can change the website color scheme in the settings at the top of the page.</p>
+        <p class="w-md text-left my-2">Get started by selecting a checklist below.</p>
       </div>
     )}
 
