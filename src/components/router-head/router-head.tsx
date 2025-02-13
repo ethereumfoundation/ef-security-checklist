@@ -10,7 +10,7 @@ export const RouterHead = component$(() => {
     <>
       {/* Basics */}
       <title>EF Security Checklist</title>
-      <meta name="description" content="Step by step guide to safeguarding your digital presence and ensuring your privacy" />
+      <meta name="description" content="Step by step guide to personal digital security and privacy" />
       
       {/* Site config */}
       <link rel="canonical" href={loc.url.href} />
@@ -24,7 +24,7 @@ export const RouterHead = component$(() => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={loc.url.href} />
       <meta property="og:title" content="EF Security Checklist" />
-      <meta property="og:description" content="Step by step guide to safeguarding your digital presence and ensuring your privacy" />
+      <meta property="og:description" content="Step by step guide to personal digital security and privacy" />
       <meta property="og:image" content="/banner.png" />
 
       {head.meta.map((m) => (

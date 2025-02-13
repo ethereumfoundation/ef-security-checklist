@@ -28,7 +28,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Step by step guide to safeguarding your digital presence and ensuring your privacy.",
+      content: "Step by step guide to personal digital security and privacy.",
     },
   ],
 };
