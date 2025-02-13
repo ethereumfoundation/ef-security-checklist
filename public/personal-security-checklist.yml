@@ -1175,7 +1175,8 @@
     details: >-
       Consider the extensive data collection capabilities of wearable devices and their implications for privacy.
       Often these devices offer to share your every activity with "friends," which sometimes means anyone interested 
-      in tracking where and what you do.
+      in tracking where and what you do. Even if sharing is off, some devices would respond to Bluetooth requests, 
+      allowing to track your presence.
   
   - point: Monitor your home network closely
     priority: Optional
@@ -1207,12 +1208,14 @@
       Prevent unauthorized credit inquiries by freezing your credit through Experian, TransUnion, Equifax, or your local 
       credit score provider.
 
-  - point: Segment your assets
+  - point: Diversify your assets
     priority: Essential
     details: >-
-      Don’t keep all your funds in one wallet, account, or bank. Use multiple wallets or accounts to diversify risk; 
-      if one is compromised, you won’t lose everything. There are many ways and tools to keep your personal finances 
-      in order, and they will help you keep track of your accounts.
+      Don’t keep all your funds in one wallet, account, or bank. Use multiple [wallets](https://ethereum.org/en/wallets/find-wallet/)
+      or accounts to diversify risk; if one is compromised, you won’t lose everything. There are many ways and tools to keep 
+      your personal finances in order, and they will help you keep track of your accounts. Consider having a scheme like this:
+      a software wallet in browser for tiny amounts, donations etc; a hardware wallet for the assets you would like
+      to access periodically; a 'cold' paper wallet for long-term storage.
 
   - point: Use virtual cards
     priority: Essential
@@ -1241,7 +1244,7 @@
     priority: Essential
     details: >-
       Only store cryptocurrencies in non-custodial wallets. For accounts holding more than $1000, use offline wallet 
-      generation and hardware wallets like [Trezor](https://trezor.io/). Learn what a multi-sig wallet is; when your 
+      generation and hardware wallets like [Trezor](https://trezor.io/) with a proper backup. Learn what a multi-sig wallet is; when your 
       friends or colleagues use crypto, wallets like [Safe](https://safe.global/wallet) or [Argent](https://www.argent.xyz/) 
       provide you with an ultimate level of security for crypto assets and reliable recovery methods.
 
@@ -1377,98 +1380,113 @@
   slug: physical-security
   description: Taking measures to prevent IRL security incidents
   icon: physical
+  color: lime
   intro: >-
-    Public records often include sensitive personal data (full name, date of birth,
-    phone number, email, address, ethnicity etc), and are gathered from a range of
-    sources (census records, birth/ death/ marriage certificates, voter registrants,
-    marketing information, customer databases, motor vehicle records, professional/
-    business licenses and all court files in full detail). This sensitive personal
-    information is
-    [easy and legal to access](https://www.consumerreports.org/consumerist/its-creepy-but-not-illegal-for-this-website-to-provide-all-your-public-info-to-anyone/),
-    which raises some [serious privacy concerns](https://privacyrights.org/resources/public-records-internet-privacy-dilemma)
-    (identity theft, personal safety risks/ stalkers, destruction of reputations, dossier society)
-
-
-    CCTV is one of the major ways that the corporations, individuals and the government
-    tracks your movements. In London, UK the average person is caught on camera about
-    500 times per day. This network is continuing to grow, and in many cities around
-    the world, facial recognition is being rolled out, meaning the state can know
-    the identity of residents on the footage in real-time.
-
-    Strong authentication, encrypted devices, patched software and anonymous web
-    browsing may be of little use if someone is able to physically compromise you,
-    your devices and your data. This section outlines some basic methods for physical security
+    Physical security is what really matters to you. Sometimes perceived as granted in the most developed countries,
+    it can diminish in days or hours. Always consider the physical security of you and your family first when applying
+    advice (like this one) from the Internet. Know local laws, and learn what's in local common sense. This section is 
+    more like a set of open questions to investigate than a set of rules.
 
   checklist:
-  - point: Destroy Sensitive Documents
+  - point: Understand public records
     priority: Essential
     details: |
-      Shred or redact sensitive documents before disposal to protect against
-      identity theft and maintain confidentiality.
+      Public records are documents or pieces of information that are not considered confidential and relate to government 
+      activities. Examples of public records includes information pertaining to births, deaths, marriages, and documented 
+      transaction with government agencies. It means that even if you follow each and every advice in all sections of
+      this checklist, your government will still have, and publish, and leak some information about your, your closest
+      relatives or co-habitants. Then your data ends in numerous databases, and can be requested through software like
+      [CLEAR](https://legal.thomsonreuters.com/en/products/clear). In a modern world it's extremely hard to be untraced,
+      so don't expect you are, keep low profile and stay prepared.
 
-  - point: Opt-Out of Public Records
+  - point: Don't reveal info on calls
     priority: Essential
     details: |
-      Contact people search websites to opt-out from listings that show persona
-      information, using guides like Michael Bazzell's Personal Data Removal Workbook.
+      Assume your voice call is recorded, automatically analysed and transcribed, labeled and saved – unless you use
+      open source verified communication software that keeps the talk encrypted, and you verified the encryption keys with 
+      your interlocutor.
 
-  - point: Watermark Documents
+  - point: Understand border searches
     priority: Essential
     details: |
-      Add a watermark with the recipient's name and date to digital copies of
-      personal documents to trace the source of a breach.
+      Sometimes when you try to enter a foreign country which neglects digital privacy rights (e.g. USA, Australia,
+      New Zealand) you may be required by a border officer to unlock your laptop/smartphone for inspection. This is a 
+      potentially difficult situation, which EFF [describes as no-win in their Border Guide](https://www.eff.org/issues/border-searches). 
+      During this process you may be separated from your devices for an undefined amount of time and will have zero control 
+      on what's happening with your data during the inspection and after it. A digital copy of all device contents may be taken without a
+      warrant, your knowledge or explicit consent. If you refuse to disclose your PIN/password, most probably you will 
+      be detained and denied entry to the country and your device may still be "temporarily" confiscated to be processed 
+      by special digital forensics tools.
 
-  - point: Don't Reveal Info on Inbound Calls
+  - point: Destroy sensitive data before disposal
     priority: Essential
     details: |
-      Only share personal data on calls you initiate and verify the recipient's phone number.
+      Shred sensitive documents before disposal to protect against identity theft and maintain confidentiality.
+      Don't just put them in trash, burn if required. Your old flash drives and hard drives still store your data,
+      unless you go through a proper timely wipe process, not a quick formatting. The smartphone which you deem unrepairable
+      still has your data in memory on chip.
 
-  - point: Stay Alert
+  - point: Secure the perimeter
     priority: Essential
-    details: Be aware of your surroundings and assess potential risks in new environments.
+    details: |
+      Ensure physical security of locations storing documents and devices, minimizing external access and using 
+      automated intrusion detection. This includes the installation of safes, exchanging contacts with
+      neighbors, learning what alarm systems can and cannot do, and installing what makes sense in your case.
 
-  - point: Secure Perimeter
+  - point: Prepare for emergency
     priority: Essential
-    details: Ensure physical security of locations storing personal info devices, minimizing external access and using intrusion detection systems.
+    details: |
+      Social unrest, technogenic catastrophes, climatic extremes can return the society around you into 18th century
+      and beyond very fast. Always have a supply of water, food and your medicines. 7 days reserve is enough, if
+      situation becomes really bad you should consider evacuation, not preparation.
 
-  - point: Physically Secure Devices
+  - point: Learn first medical help
     priority: Essential
-    details: Use physical security measures like Kensington locks, webcam covers, and privacy screens for devices.
-
-  - point: Keep Devices Out of Direct Sight
+    details: |
+      Acquire basic first aid training and learn how to respond to common injuries or emergencies.
+      Consider taking certified CPR and first aid courses, and maintain a well-stocked first aid kit both at 
+      home and on the go.
+  
+  - point: Keep essential documents in an emergency bag
     priority: Essential
-    details: Prevent devices from being visible from outside to mitigate risks from lasers and theft.
-
-  - point: Protect your PIN
+    details: |
+      Store important documents (IDs, passports, legal papers) in a durable, easy-to-carry bag.
+      Prepare an additional bag with critical items or at least learn which essentials to include to purchase 
+      some of the items on occasion.
+  
+  - point: Prepare plan B for national emergencies
     priority: Essential
-    details: Shield your PIN entry from onlookers and cameras, and clean touchscreens after use.
-
-  - point: Check for Skimmers
+    details: |
+      Develop a contingency plan (Plan B) in case conditions in your country deteriorate dramatically.
+      Research potential safe havens, understand relocation logistics, and establish clear steps for an 
+      emergency evacuation or long-term relocation.
+  
+  - point: Ensure family members have valid foreign travel documents and backups
     priority: Essential
-    details: Inspect ATMs and public devices for skimming devices and tampering signs before use.
+    details: |
+      Verify that every family member’s passport or travel document is current and unexpired.
+      Maintain digital copies of all important documents in a secure location that can be accessed 
+      remotely in case of an emergency.
+  
+  - point: Don't leave anything valuable in the car
+    priority: Essential
+    details: |
+      Car may look like something private and safe, but locks and alarms in it won't guarantee security. Do not
+      leave any valuable belongings or devices in the car. Always enable the central lock right after all passengers
+      are inside. If you absolutely need to leave something in your car regularly: prepare a place for it, additional 
+      locks and metal boxes should be installed, or non-manufacturer compartments added.
 
-  - point: Protect your Home Address
+  - point: Remove yourself from public records
     priority: Optional
-    details: Use alternative locations, forwarding addresses, and anonymous payment methods to protect your home address.
+    details: |
+      Contact people search websites to opt-out from listings that show persona information, using guides like 
+      [Personal Data Removal Workbook](https://inteltechniques.com/workbook.html). This is an extremely time
+      consuming process, and there are service providers that offer to do it for you. Remember about [Streisand effect](https://en.wikipedia.org/wiki/Streisand_effect)
+      while planning your efforts.
 
-  - point: Use a PIN, Not Biometrics
-    priority: Advanced
-    details: Prefer PINs over biometrics for device security in situations where legal coercion to unlock devices may occur.
-
-  - point: Reduce exposure to CCTV
-    priority: Advanced
-    details: Wear disguises and choose routes with fewer cameras to avoid surveillance.
-
-  - point: Anti-Facial Recognition Clothing
-    priority: Advanced
-    details: Wear clothing with patterns that trick facial-recognition technology.
-
-  - point: Reduce Night Vision Exposure
-    priority: Advanced
-    details: Use IR light sources or reflective glasses to obstruct night vision cameras.
-
-  - point: Protect your DNA
-    priority: Advanced
-    details: Avoid sharing DNA with heritage websites and be cautious about leaving DNA traces.
-
-  color: lime
+  - point: Prepare a will for crypto and online accounts
+    priority: Optional
+    details: |
+      Draft a digital will that outlines clear instructions for managing your crypto assets and online accounts.
+      Set up secure methods for accessing these accounts and ensure that trusted individuals know how to execute 
+      your wishes.
