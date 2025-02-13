@@ -680,7 +680,7 @@
     details: >-
       Use a reputable, paid VPN. This can help protect sites you visit from logging your real IP, reduce
       the amount of data your ISP can collect, and increase protection on public Wi-Fi. All EFers are
-      eligible for a VPN license, please contact [opsec@ethereum.org](mailto:opsec@ethereum.org) to get it.
+      eligible for a VPN license, please contact [security-checklist@ethereum.org](mailto:security-checklist@ethereum.org) to get it.
 
   - point: Change your router password
     priority: Essential
