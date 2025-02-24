@@ -537,7 +537,7 @@
     details: >-
       Metadata is additional information attached to media. When you send a photo, audio recording, video, or 
       document you may be revealing more than you intended to: date, location, information identifying you
-      or device may be included with it.
+      or device may be included with it. Also learn [why communication metadata matters](https://ssd.eff.org/module/why-metadata-matters).
 
   - point: Verify your correspondent
     priority: Optional
@@ -751,8 +751,11 @@
   - point: Set up a network-wide VPN
     priority: Optional
     details: >-
-      If you configure the VPN on your router, then traffic from all devices will be encrypted and routed 
-      through it, without needing individual VPN apps on each device.
+      If you configure the VPN client on your router, then traffic from all devices will be encrypted and routed 
+      through that tunnel, without needing individual VPN apps on each device while they are connected to the network. 
+      Additionally, learn about modern tools for virtual private network management, such as [NetBird](https://github.com/netbirdio/netbird)
+      and [Headscale/Tailscale](https://headscale.net/stable/about/faq/), which have an easy UI for complex networking
+      setups.
 
   - point: Use a guest network for guests
     priority: Optional
@@ -786,11 +789,14 @@
       to a level that still provides coverage for your flat but doesn’t reach unnecessary areas. Use a second, 
       low-power access point with a reduced range for remote areas (e.g., your cellar) if you still need coverage there. 
 
-  - point: Whitelist MAC addresses
+  - point: Protect your home network against intrusion
     priority: Advanced
     details: >-
-      You can whitelist MAC addresses in your router settings, disallowing any unknown devices to 
-      connect to your network, even if they know your Wi-Fi password or have physical access to the cable.
+      A proper enterprise-grade network security requires 802.1X authentication and running a RADIUS server, which
+      is usually too complex for a home setup. To keep an eye on devices connected to your home LAN, set up tools like 
+      [Pi.Alert](https://github.com/leiweibau/Pi.Alert/), [WatchYourLAN](https://github.com/aceberg/WatchYourLAN), or 
+      [Sniffnet](https://github.com/GyulyVGC/sniffnet). Whitelisting MAC addresses in network router settings won't help
+      because MAC sniffing and cloning is easy.
 
   - point: Disable Wi-Fi on all devices
     priority: Advanced
