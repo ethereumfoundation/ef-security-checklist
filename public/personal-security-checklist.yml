@@ -794,7 +794,7 @@
     details: >-
       A proper enterprise-grade network security requires 802.1X authentication and running a RADIUS server, which
       is usually too complex for a home setup. To keep an eye on devices connected to your home LAN, set up tools like 
-      [Pi.Alert](https://github.com/leiweibau/Pi.Alert/), [WatchYourLAN](https://github.com/aceberg/WatchYourLAN), or 
+      [Pi.Alert](https://github.com/leiweibau/Pi.Alert/), [NetAlertX](https://github.com/jokob-sk/NetAlertX), [WatchYourLAN](https://github.com/aceberg/WatchYourLAN), or 
       [Sniffnet](https://github.com/GyulyVGC/sniffnet). Whitelisting MAC addresses in network router settings won't help
       because MAC sniffing and cloning is easy.
 
