@@ -894,13 +894,14 @@
   - point: Secure your SIM card
     priority: Essential
     details: >-
+      Go to your phone’s settings and enable SIM card PIN lock, and change the default PIN. This will require a PIN 
+      each time your phone restarts or the SIM is moved to a new device.
       SIM hijacking occurs when an attacker fraudulently transfers your phone number to their SIM card, gaining 
-      access to your calls and incoming SMS. Contact your mobile operator, ask for a "No Port Freeze" or  
+      access to your calls and incoming SMS. Contact your mobile operator and ask for a "No Port Freeze" or  
       setting "Port-Out Authorization PIN/password". If possible, request that SIM swaps can only be done in 
       person at a carrier store with proper ID. This mostly prevents unauthorized changes to your account. Ensure 
-      the password is strong and not easily guessable (3-5 words sentence is best). Go to your phone’s settings 
-      and enable SIM card PIN lock. This requires a PIN each time your phone restarts or the SIM is moved to a 
-      new device.
+      the password doesn't look like random characters (3-5 words is best). The reason is that it would be verified
+      by a human operator, and a hacker can try to say "I just entered gibberish".
 
   - point: Opt-out of caller ID listings
     priority: Optional
