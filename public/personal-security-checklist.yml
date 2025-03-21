@@ -1114,6 +1114,14 @@
       [OpenCanary](https://github.com/thinkst/opencanary) can be installed on your server or you can create
       [canary tokens](https://canarytokens.org/nest/) online.
 
+  - point: Set up volumes with plausible deniability
+    priority: Advanced
+    details: >-
+      This technique allows you to hide the existence of encrypted data even from forensic research. Data is hidden
+      in free disk space, among random unallocated bytes. When forced to give out the encryption password,
+      you can unlock the outer encryption layer, and there's no way to check if other layers exist. Tools like
+      [Shufflecake](https://shufflecake.net/) and [VeraCrypt](https://www.veracrypt.fr/) have such functionality.
+
 - title: Smart Home
   slug: smart-home
   description: Using IoT devices without compromising your privacy
